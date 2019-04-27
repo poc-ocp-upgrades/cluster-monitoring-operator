@@ -11,6 +11,8 @@ import (
 func TestConfigParsing(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	f, err := os.Open("../../examples/config/config.yaml")
 	if err != nil {
 		t.Fatal(err)
@@ -23,12 +25,16 @@ func TestConfigParsing(t *testing.T) {
 func TestEmptyConfigIsValid(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_, err := NewConfigFromString("")
 	if err != nil {
 		t.Fatal(err)
 	}
 }
 func TestTelemeterClientConfig(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	truev, falsev := true, false
@@ -43,6 +49,8 @@ func TestTelemeterClientConfig(t *testing.T) {
 	}
 }
 func TestEtcdDefaultsToDisabled(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	c, err := NewConfigFromString("")
@@ -66,6 +74,8 @@ type configCheckFunc func(*Config, error) error
 func configChecks(fs ...configCheckFunc) configCheckFunc {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return configCheckFunc(func(c *Config, err error) error {
 		for _, f := range fs {
 			if e := f(c, err); e != nil {
@@ -78,6 +88,8 @@ func configChecks(fs ...configCheckFunc) configCheckFunc {
 func hasError(expected bool) configCheckFunc {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return configCheckFunc(func(_ *Config, err error) error {
 		if got := err != nil; got != expected {
 			return fmt.Errorf("expected error %t, got %t", expected, got)
@@ -86,6 +98,8 @@ func hasError(expected bool) configCheckFunc {
 	})
 }
 func TestLoadProxy(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	hasHTTPProxy := func(expected string) configCheckFunc {

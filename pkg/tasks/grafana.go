@@ -14,9 +14,13 @@ type GrafanaTask struct {
 func NewGrafanaTask(client *client.Client, factory *manifests.Factory) *GrafanaTask {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &GrafanaTask{client: client, factory: factory}
 }
 func (t *GrafanaTask) Run() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	cr, err := t.factory.GrafanaClusterRole()

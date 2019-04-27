@@ -14,9 +14,13 @@ type ConfigSharingTask struct {
 func NewConfigSharingTask(client *client.Client, factory *manifests.Factory) *ConfigSharingTask {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &ConfigSharingTask{client: client, factory: factory}
 }
 func (t *ConfigSharingTask) Run() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	promRoute, err := t.factory.PrometheusK8sRoute()

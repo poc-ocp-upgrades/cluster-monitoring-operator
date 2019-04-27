@@ -32,6 +32,8 @@ type Framework struct {
 func New(kubeConfigPath string) (*Framework, cleanUpFunc, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	config, err := clientcmd.BuildConfigFromFlags("", kubeConfigPath)
 	if err != nil {
 		return nil, nil, err
@@ -74,6 +76,8 @@ type cleanUpFunc func() error
 func (f *Framework) setup() (cleanUpFunc, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cleanUpFuncs := []cleanUpFunc{}
 	cf, err := f.CreateServiceAccount()
 	if err != nil {
@@ -106,6 +110,8 @@ func (f *Framework) setup() (cleanUpFunc, error) {
 func (f *Framework) CreateServiceAccount() (cleanUpFunc, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	serviceAccount := &v1.ServiceAccount{ObjectMeta: metav1.ObjectMeta{Name: "cluster-monitoring-operator-e2e", Namespace: "openshift-monitoring"}}
 	serviceAccount, err := f.KubeClient.CoreV1().ServiceAccounts("openshift-monitoring").Create(serviceAccount)
 	if err != nil {
@@ -118,6 +124,8 @@ func (f *Framework) CreateServiceAccount() (cleanUpFunc, error) {
 func (f *Framework) CreateClusterRoleBinding() (cleanUpFunc, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	clusterRoleBinding := &rbacv1.ClusterRoleBinding{ObjectMeta: metav1.ObjectMeta{Name: "cluster-monitoring-operator-e2e"}, Subjects: []rbacv1.Subject{{Kind: "ServiceAccount", Name: "cluster-monitoring-operator-e2e", Namespace: "openshift-monitoring"}}, RoleRef: rbacv1.RoleRef{Kind: "ClusterRole", Name: "cluster-monitoring-view", APIGroup: "rbac.authorization.k8s.io"}}
 	clusterRoleBinding, err := f.KubeClient.RbacV1().ClusterRoleBindings().Create(clusterRoleBinding)
 	if err != nil {
@@ -128,6 +136,8 @@ func (f *Framework) CreateClusterRoleBinding() (cleanUpFunc, error) {
 	}, nil
 }
 func Poll(interval, timeout time.Duration, f func() error) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	var lastErr error

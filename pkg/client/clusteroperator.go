@@ -17,9 +17,13 @@ type StatusReporter struct {
 func NewStatusReporter(client clientv1.ClusterOperatorInterface, name, version string) *StatusReporter {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &StatusReporter{client: client, clusterOperatorName: name, version: version}
 }
 func (r *StatusReporter) SetDone() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	co, err := r.client.Get(r.clusterOperatorName, metav1.GetOptions{})
@@ -47,6 +51,8 @@ func (r *StatusReporter) SetDone() error {
 func (r *StatusReporter) SetInProgress() error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	co, err := r.client.Get(r.clusterOperatorName, metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
 		co = r.newClusterOperator()
@@ -63,6 +69,8 @@ func (r *StatusReporter) SetInProgress() error {
 	return err
 }
 func (r *StatusReporter) SetFailed(statusErr error) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	co, err := r.client.Get(r.clusterOperatorName, metav1.GetOptions{})
@@ -83,6 +91,8 @@ func (r *StatusReporter) SetFailed(statusErr error) error {
 	return err
 }
 func (r *StatusReporter) newClusterOperator() *v1.ClusterOperator {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	time := metav1.Now()

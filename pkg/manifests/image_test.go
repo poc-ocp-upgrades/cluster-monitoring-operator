@@ -7,6 +7,8 @@ import (
 func TestImageParsing(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	imageCases := []struct {
 		str	string
 		image	image

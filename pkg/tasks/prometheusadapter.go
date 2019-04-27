@@ -16,9 +16,13 @@ type PrometheusAdapterTask struct {
 func NewPrometheusAdapterTaks(namespace string, client *client.Client, factory *manifests.Factory) *PrometheusAdapterTask {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &PrometheusAdapterTask{client: client, factory: factory, namespace: namespace}
 }
 func (t *PrometheusAdapterTask) Run() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	{
@@ -174,6 +178,8 @@ func (t *PrometheusAdapterTask) Run() error {
 	return nil
 }
 func (t *PrometheusAdapterTask) deleteOldPrometheusAdapterSecrets(newHash string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	secrets, err := t.client.KubernetesInterface().CoreV1().Secrets(t.namespace).List(metav1.ListOptions{LabelSelector: "monitoring.openshift.io/name=prometheus-adapter,monitoring.openshift.io/hash!=" + newHash})

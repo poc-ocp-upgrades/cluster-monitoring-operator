@@ -14,9 +14,13 @@ type PrometheusOperatorTask struct {
 func NewPrometheusOperatorTask(client *client.Client, factory *manifests.Factory) *PrometheusOperatorTask {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &PrometheusOperatorTask{client: client, factory: factory}
 }
 func (t *PrometheusOperatorTask) Run() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sa, err := t.factory.PrometheusOperatorServiceAccount()

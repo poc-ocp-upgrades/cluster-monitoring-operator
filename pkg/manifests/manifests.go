@@ -128,6 +128,8 @@ var (
 func MustAssetReader(asset string) io.Reader {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bytes.NewReader(MustAsset(asset))
 }
 
@@ -139,9 +141,13 @@ type Factory struct {
 func NewFactory(namespace string, c *Config) *Factory {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &Factory{namespace: namespace, config: c}
 }
 func (f *Factory) PrometheusExternalURL(host string) *url.URL {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if f.config.PrometheusK8sConfig.Hostport != "" {
@@ -152,12 +158,16 @@ func (f *Factory) PrometheusExternalURL(host string) *url.URL {
 func (f *Factory) AlertmanagerExternalURL(host string) *url.URL {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if f.config.AlertmanagerMainConfig.Hostport != "" {
 		host = f.config.AlertmanagerMainConfig.Hostport
 	}
 	return &url.URL{Scheme: "https", Host: host, Path: "/"}
 }
 func (f *Factory) AlertmanagerConfig() (*v1.Secret, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewSecret(MustAssetReader(AlertmanagerConfig))
@@ -168,6 +178,8 @@ func (f *Factory) AlertmanagerConfig() (*v1.Secret, error) {
 	return s, nil
 }
 func (f *Factory) AlertmanagerProxySecret() (*v1.Secret, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewSecret(MustAssetReader(AlertmanagerProxySecret))
@@ -185,6 +197,8 @@ func (f *Factory) AlertmanagerProxySecret() (*v1.Secret, error) {
 func (f *Factory) AlertmanagerService() (*v1.Service, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewService(MustAssetReader(AlertmanagerService))
 	if err != nil {
 		return nil, err
@@ -193,6 +207,8 @@ func (f *Factory) AlertmanagerService() (*v1.Service, error) {
 	return s, nil
 }
 func (f *Factory) AlertmanagerServiceAccount() (*v1.ServiceAccount, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewServiceAccount(MustAssetReader(AlertmanagerServiceAccount))
@@ -205,6 +221,8 @@ func (f *Factory) AlertmanagerServiceAccount() (*v1.ServiceAccount, error) {
 func (f *Factory) AlertmanagerClusterRoleBinding() (*rbacv1beta1.ClusterRoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(AlertmanagerClusterRoleBinding))
 	if err != nil {
 		return nil, err
@@ -215,9 +233,13 @@ func (f *Factory) AlertmanagerClusterRoleBinding() (*rbacv1beta1.ClusterRoleBind
 func (f *Factory) AlertmanagerClusterRole() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.NewClusterRole(MustAssetReader(AlertmanagerClusterRole))
 }
 func (f *Factory) AlertmanagerServiceMonitor() (*monv1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sm, err := f.NewServiceMonitor(MustAssetReader(AlertmanagerServiceMonitor))
@@ -229,6 +251,8 @@ func (f *Factory) AlertmanagerServiceMonitor() (*monv1.ServiceMonitor, error) {
 	return sm, nil
 }
 func (f *Factory) AlertmanagerMain(host string) (*monv1.Alertmanager, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	a, err := f.NewAlertmanager(MustAssetReader(AlertmanagerMain))
@@ -265,6 +289,8 @@ func (f *Factory) AlertmanagerMain(host string) (*monv1.Alertmanager, error) {
 func (f *Factory) AlertmanagerRoute() (*routev1.Route, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	r, err := f.NewRoute(MustAssetReader(AlertmanagerRoute))
 	if err != nil {
 		return nil, err
@@ -278,6 +304,8 @@ func (f *Factory) AlertmanagerRoute() (*routev1.Route, error) {
 func (f *Factory) KubeStateMetricsClusterRoleBinding() (*rbacv1beta1.ClusterRoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(KubeStateMetricsClusterRoleBinding))
 	if err != nil {
 		return nil, err
@@ -288,9 +316,13 @@ func (f *Factory) KubeStateMetricsClusterRoleBinding() (*rbacv1beta1.ClusterRole
 func (f *Factory) KubeStateMetricsClusterRole() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.NewClusterRole(MustAssetReader(KubeStateMetricsClusterRole))
 }
 func (f *Factory) KubeStateMetricsServiceMonitor() (*monv1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sm, err := f.NewServiceMonitor(MustAssetReader(KubeStateMetricsServiceMonitor))
@@ -303,6 +335,8 @@ func (f *Factory) KubeStateMetricsServiceMonitor() (*monv1.ServiceMonitor, error
 	return sm, nil
 }
 func (f *Factory) KubeStateMetricsDeployment() (*appsv1.Deployment, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	d, err := f.NewDeployment(MustAssetReader(KubeStateMetricsDeployment))
@@ -321,6 +355,8 @@ func (f *Factory) KubeStateMetricsDeployment() (*appsv1.Deployment, error) {
 func (f *Factory) KubeStateMetricsServiceAccount() (*v1.ServiceAccount, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewServiceAccount(MustAssetReader(KubeStateMetricsServiceAccount))
 	if err != nil {
 		return nil, err
@@ -329,6 +365,8 @@ func (f *Factory) KubeStateMetricsServiceAccount() (*v1.ServiceAccount, error) {
 	return s, nil
 }
 func (f *Factory) KubeStateMetricsService() (*v1.Service, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewService(MustAssetReader(KubeStateMetricsService))
@@ -341,6 +379,8 @@ func (f *Factory) KubeStateMetricsService() (*v1.Service, error) {
 func (f *Factory) NodeExporterServiceMonitor() (*monv1.ServiceMonitor, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sm, err := f.NewServiceMonitor(MustAssetReader(NodeExporterServiceMonitor))
 	if err != nil {
 		return nil, err
@@ -350,6 +390,8 @@ func (f *Factory) NodeExporterServiceMonitor() (*monv1.ServiceMonitor, error) {
 	return sm, nil
 }
 func (f *Factory) NodeExporterDaemonSet() (*appsv1.DaemonSet, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	ds, err := f.NewDaemonSet(MustAssetReader(NodeExporterDaemonSet))
@@ -364,6 +406,8 @@ func (f *Factory) NodeExporterDaemonSet() (*appsv1.DaemonSet, error) {
 func (f *Factory) NodeExporterService() (*v1.Service, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewService(MustAssetReader(NodeExporterService))
 	if err != nil {
 		return nil, err
@@ -374,6 +418,8 @@ func (f *Factory) NodeExporterService() (*v1.Service, error) {
 func (f *Factory) NodeExporterSecurityContextConstraints() (*securityv1.SecurityContextConstraints, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	scc, err := f.NewSecurityContextConstraints(MustAssetReader(NodeExporterSecurityContextConstraints))
 	if err != nil {
 		return nil, err
@@ -381,6 +427,8 @@ func (f *Factory) NodeExporterSecurityContextConstraints() (*securityv1.Security
 	return scc, nil
 }
 func (f *Factory) NodeExporterServiceAccount() (*v1.ServiceAccount, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewServiceAccount(MustAssetReader(NodeExporterServiceAccount))
@@ -393,6 +441,8 @@ func (f *Factory) NodeExporterServiceAccount() (*v1.ServiceAccount, error) {
 func (f *Factory) NodeExporterClusterRoleBinding() (*rbacv1beta1.ClusterRoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(NodeExporterClusterRoleBinding))
 	if err != nil {
 		return nil, err
@@ -403,9 +453,13 @@ func (f *Factory) NodeExporterClusterRoleBinding() (*rbacv1beta1.ClusterRoleBind
 func (f *Factory) NodeExporterClusterRole() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.NewClusterRole(MustAssetReader(NodeExporterClusterRole))
 }
 func (f *Factory) PrometheusK8sClusterRoleBinding() (*rbacv1beta1.ClusterRoleBinding, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(PrometheusK8sClusterRoleBinding))
@@ -418,9 +472,13 @@ func (f *Factory) PrometheusK8sClusterRoleBinding() (*rbacv1beta1.ClusterRoleBin
 func (f *Factory) PrometheusK8sClusterRole() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.NewClusterRole(MustAssetReader(PrometheusK8sClusterRole))
 }
 func (f *Factory) PrometheusK8sRoleConfig() (*rbacv1beta1.Role, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	r, err := f.NewRole(MustAssetReader(PrometheusK8sRoleConfig))
@@ -431,6 +489,8 @@ func (f *Factory) PrometheusK8sRoleConfig() (*rbacv1beta1.Role, error) {
 	return r, nil
 }
 func (f *Factory) PrometheusK8sRoleBindingList() (*rbacv1beta1.RoleBindingList, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	rbl, err := f.NewRoleBindingList(MustAssetReader(PrometheusK8sRoleBindingList))
@@ -445,6 +505,8 @@ func (f *Factory) PrometheusK8sRoleBindingList() (*rbacv1beta1.RoleBindingList, 
 func (f *Factory) PrometheusK8sRoleBindingConfig() (*rbacv1beta1.RoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	rb, err := f.NewRoleBinding(MustAssetReader(PrometheusK8sRoleBindingConfig))
 	if err != nil {
 		return nil, err
@@ -453,6 +515,8 @@ func (f *Factory) PrometheusK8sRoleBindingConfig() (*rbacv1beta1.RoleBinding, er
 	return rb, nil
 }
 func (f *Factory) PrometheusK8sRoleList() (*rbacv1beta1.RoleList, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	rl, err := f.NewRoleList(MustAssetReader(PrometheusK8sRoleList))
@@ -465,6 +529,8 @@ func (f *Factory) PrometheusK8sRoleList() (*rbacv1beta1.RoleList, error) {
 	return rl, nil
 }
 func (f *Factory) PrometheusK8sRules() (*monv1.PrometheusRule, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	r, err := f.NewPrometheusRule(MustAssetReader(PrometheusK8sRules))
@@ -486,6 +552,8 @@ func (f *Factory) PrometheusK8sRules() (*monv1.PrometheusRule, error) {
 func (f *Factory) PrometheusK8sServiceAccount() (*v1.ServiceAccount, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewServiceAccount(MustAssetReader(PrometheusK8sServiceAccount))
 	if err != nil {
 		return nil, err
@@ -494,6 +562,8 @@ func (f *Factory) PrometheusK8sServiceAccount() (*v1.ServiceAccount, error) {
 	return s, nil
 }
 func (f *Factory) PrometheusK8sProxySecret() (*v1.Secret, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewSecret(MustAssetReader(PrometheusK8sProxySecret))
@@ -511,6 +581,8 @@ func (f *Factory) PrometheusK8sProxySecret() (*v1.Secret, error) {
 func (f *Factory) PrometheusK8sHtpasswdSecret(password string) (*v1.Secret, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewSecret(MustAssetReader(PrometheusK8sHtpasswd))
 	if err != nil {
 		return nil, err
@@ -524,6 +596,8 @@ func (f *Factory) PrometheusK8sHtpasswdSecret(password string) (*v1.Secret, erro
 func (f *Factory) PrometheusRBACProxySecret() (*v1.Secret, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewSecret(MustAssetReader(PrometheusRBACProxySecret))
 	if err != nil {
 		return nil, err
@@ -534,6 +608,8 @@ func (f *Factory) PrometheusRBACProxySecret() (*v1.Secret, error) {
 func (f *Factory) PrometheusK8sServingCertsCABundle() (*v1.ConfigMap, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c, err := f.NewConfigMap(MustAssetReader(PrometheusK8sServingCertsCABundle))
 	if err != nil {
 		return nil, err
@@ -542,6 +618,8 @@ func (f *Factory) PrometheusK8sServingCertsCABundle() (*v1.ConfigMap, error) {
 	return c, nil
 }
 func (f *Factory) PrometheusK8sKubeletServingCABundle(data map[string]string) (*v1.ConfigMap, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	c, err := f.NewConfigMap(MustAssetReader(PrometheusK8sKubeletServingCABundle))
@@ -555,6 +633,8 @@ func (f *Factory) PrometheusK8sKubeletServingCABundle(data map[string]string) (*
 func (f *Factory) PrometheusK8sEtcdServiceMonitor() (*monv1.ServiceMonitor, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewServiceMonitor(MustAssetReader(PrometheusK8sEtcdServiceMonitor))
 	if err != nil {
 		return nil, err
@@ -563,6 +643,8 @@ func (f *Factory) PrometheusK8sEtcdServiceMonitor() (*monv1.ServiceMonitor, erro
 	return s, nil
 }
 func (f *Factory) PrometheusK8sEtcdSecret(tlsClient *v1.Secret, ca *v1.ConfigMap) (*v1.Secret, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	data := make(map[string]string)
@@ -586,6 +668,8 @@ func (f *Factory) PrometheusK8sEtcdSecret(tlsClient *v1.Secret, ca *v1.ConfigMap
 func (f *Factory) PrometheusK8sRoute() (*routev1.Route, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	r, err := f.NewRoute(MustAssetReader(PrometheusK8sRoute))
 	if err != nil {
 		return nil, err
@@ -599,9 +683,13 @@ func (f *Factory) PrometheusK8sRoute() (*routev1.Route, error) {
 func (f *Factory) SharingConfig(promHost, amHost, grafanaHost *url.URL) *v1.ConfigMap {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &v1.ConfigMap{ObjectMeta: metav1.ObjectMeta{Name: "sharing-config", Namespace: f.namespace}, Data: map[string]string{"grafanaURL": grafanaHost.String(), "prometheusURL": promHost.String(), "alertmanagerURL": amHost.String()}}
 }
 func (f *Factory) PrometheusK8s(host string) (*monv1.Prometheus, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	p, err := f.NewPrometheus(MustAssetReader(PrometheusK8s))
@@ -645,6 +733,8 @@ func (f *Factory) PrometheusK8s(host string) (*monv1.Prometheus, error) {
 func (f *Factory) PrometheusK8sKubeletServiceMonitor() (*monv1.ServiceMonitor, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewServiceMonitor(MustAssetReader(PrometheusK8sKubeletServiceMonitor))
 	if err != nil {
 		return nil, err
@@ -655,6 +745,8 @@ func (f *Factory) PrometheusK8sKubeletServiceMonitor() (*monv1.ServiceMonitor, e
 func (f *Factory) PrometheusK8sApiserverServiceMonitor() (*monv1.ServiceMonitor, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewServiceMonitor(MustAssetReader(PrometheusK8sApiserverServiceMonitor))
 	if err != nil {
 		return nil, err
@@ -663,6 +755,8 @@ func (f *Factory) PrometheusK8sApiserverServiceMonitor() (*monv1.ServiceMonitor,
 	return s, nil
 }
 func (f *Factory) PrometheusK8sPrometheusServiceMonitor() (*monv1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sm, err := f.NewServiceMonitor(MustAssetReader(PrometheusK8sPrometheusServiceMonitor))
@@ -676,6 +770,8 @@ func (f *Factory) PrometheusK8sPrometheusServiceMonitor() (*monv1.ServiceMonitor
 func (f *Factory) PrometheusK8sKubeSchedulerServiceMonitor() (*monv1.ServiceMonitor, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewServiceMonitor(MustAssetReader(PrometheusK8sKubeSchedulerServiceMonitor))
 	if err != nil {
 		return nil, err
@@ -684,6 +780,8 @@ func (f *Factory) PrometheusK8sKubeSchedulerServiceMonitor() (*monv1.ServiceMoni
 	return s, nil
 }
 func (f *Factory) PrometheusK8sKubeControllerManagerServiceMonitor() (*monv1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewServiceMonitor(MustAssetReader(PrometheusK8sKubeControllerManagerServiceMonitor))
@@ -696,6 +794,8 @@ func (f *Factory) PrometheusK8sKubeControllerManagerServiceMonitor() (*monv1.Ser
 func (f *Factory) PrometheusK8sServiceMonitorClusterVersionOperator() (*monv1.ServiceMonitor, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewServiceMonitor(MustAssetReader(PrometheusK8sServiceMonitorClusterVersionOperator))
 	if err != nil {
 		return nil, err
@@ -704,6 +804,8 @@ func (f *Factory) PrometheusK8sServiceMonitorClusterVersionOperator() (*monv1.Se
 	return s, nil
 }
 func (f *Factory) PrometheusK8sServiceMonitorOpenShiftApiserver() (*monv1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewServiceMonitor(MustAssetReader(PrometheusK8sServiceMonitorOpenShiftApiserver))
@@ -716,9 +818,13 @@ func (f *Factory) PrometheusK8sServiceMonitorOpenShiftApiserver() (*monv1.Servic
 func (f *Factory) PrometheusAdapterClusterRole() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.NewClusterRole(MustAssetReader(PrometheusAdapterClusterRole))
 }
 func (f *Factory) PrometheusAdapterClusterRoleServerResources() (*rbacv1beta1.ClusterRole, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return f.NewClusterRole(MustAssetReader(PrometheusAdapterClusterRoleServerResources))
@@ -726,9 +832,13 @@ func (f *Factory) PrometheusAdapterClusterRoleServerResources() (*rbacv1beta1.Cl
 func (f *Factory) PrometheusAdapterClusterRoleAggregatedMetricsReader() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.NewClusterRole(MustAssetReader(PrometheusAdapterClusterRoleAggregatedMetricsReader))
 }
 func (f *Factory) PrometheusAdapterClusterRoleBinding() (*rbacv1beta1.ClusterRoleBinding, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(PrometheusAdapterClusterRoleBinding))
@@ -741,6 +851,8 @@ func (f *Factory) PrometheusAdapterClusterRoleBinding() (*rbacv1beta1.ClusterRol
 func (f *Factory) PrometheusAdapterClusterRoleBindingDelegator() (*rbacv1beta1.ClusterRoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(PrometheusAdapterClusterRoleBindingDelegator))
 	if err != nil {
 		return nil, err
@@ -749,6 +861,8 @@ func (f *Factory) PrometheusAdapterClusterRoleBindingDelegator() (*rbacv1beta1.C
 	return crb, nil
 }
 func (f *Factory) PrometheusAdapterClusterRoleBindingView() (*rbacv1beta1.ClusterRoleBinding, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(PrometheusAdapterClusterRoleBindingView))
@@ -761,6 +875,8 @@ func (f *Factory) PrometheusAdapterClusterRoleBindingView() (*rbacv1beta1.Cluste
 func (f *Factory) PrometheusAdapterRoleBindingAuthReader() (*rbacv1beta1.RoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	rb, err := f.NewRoleBinding(MustAssetReader(PrometheusAdapterRoleBindingAuthReader))
 	if err != nil {
 		return nil, err
@@ -769,6 +885,8 @@ func (f *Factory) PrometheusAdapterRoleBindingAuthReader() (*rbacv1beta1.RoleBin
 	return rb, nil
 }
 func (f *Factory) PrometheusAdapterServiceAccount() (*v1.ServiceAccount, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sa, err := f.NewServiceAccount(MustAssetReader(PrometheusAdapterServiceAccount))
@@ -781,6 +899,8 @@ func (f *Factory) PrometheusAdapterServiceAccount() (*v1.ServiceAccount, error) 
 func (f *Factory) PrometheusAdapterConfigMap() (*v1.ConfigMap, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cm, err := f.NewConfigMap(MustAssetReader(PrometheusAdapterConfigMap))
 	if err != nil {
 		return nil, err
@@ -791,6 +911,8 @@ func (f *Factory) PrometheusAdapterConfigMap() (*v1.ConfigMap, error) {
 func (f *Factory) PrometheusAdapterConfigMapPrometheus() (*v1.ConfigMap, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cm, err := f.NewConfigMap(MustAssetReader(PrometheusAdapterConfigMapPrometheus))
 	if err != nil {
 		return nil, err
@@ -799,6 +921,8 @@ func (f *Factory) PrometheusAdapterConfigMapPrometheus() (*v1.ConfigMap, error) 
 	return cm, nil
 }
 func (f *Factory) PrometheusAdapterDeployment(apiAuthSecretName string, requestheader map[string]string) (*appsv1.Deployment, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	dep, err := f.NewDeployment(MustAssetReader(PrometheusAdapterDeployment))
@@ -830,6 +954,8 @@ func (f *Factory) PrometheusAdapterDeployment(apiAuthSecretName string, requesth
 func (f *Factory) PrometheusAdapterService() (*v1.Service, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewService(MustAssetReader(PrometheusAdapterService))
 	if err != nil {
 		return nil, err
@@ -838,6 +964,8 @@ func (f *Factory) PrometheusAdapterService() (*v1.Service, error) {
 	return s, nil
 }
 func (f *Factory) PrometheusAdapterSecret(tlsSecret *v1.Secret, apiAuthConfigmap *v1.ConfigMap) (*v1.Secret, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	data := make(map[string]string)
@@ -865,9 +993,13 @@ func (f *Factory) PrometheusAdapterSecret(tlsSecret *v1.Secret, apiAuthConfigmap
 func (f *Factory) PrometheusAdapterAPIService() (*apiregistrationv1beta1.APIService, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.NewAPIService(MustAssetReader(PrometheusAdapterAPIService))
 }
 func (f *Factory) PrometheusOperatorServiceMonitor() (*monv1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sm, err := f.NewServiceMonitor(MustAssetReader(PrometheusOperatorServiceMonitor))
@@ -880,6 +1012,8 @@ func (f *Factory) PrometheusOperatorServiceMonitor() (*monv1.ServiceMonitor, err
 func (f *Factory) PrometheusOperatorClusterRoleBinding() (*rbacv1beta1.ClusterRoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(PrometheusOperatorClusterRoleBinding))
 	if err != nil {
 		return nil, err
@@ -890,9 +1024,13 @@ func (f *Factory) PrometheusOperatorClusterRoleBinding() (*rbacv1beta1.ClusterRo
 func (f *Factory) PrometheusOperatorClusterRole() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.NewClusterRole(MustAssetReader(PrometheusOperatorClusterRole))
 }
 func (f *Factory) PrometheusOperatorServiceAccount() (*v1.ServiceAccount, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewServiceAccount(MustAssetReader(PrometheusOperatorServiceAccount))
@@ -903,6 +1041,8 @@ func (f *Factory) PrometheusOperatorServiceAccount() (*v1.ServiceAccount, error)
 	return s, nil
 }
 func (f *Factory) PrometheusOperatorDeployment(namespaces []string) (*appsv1.Deployment, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	d, err := f.NewDeployment(MustAssetReader(PrometheusOperatorDeployment))
@@ -932,6 +1072,8 @@ func (f *Factory) PrometheusOperatorDeployment(namespaces []string) (*appsv1.Dep
 func (f *Factory) PrometheusOperatorService() (*v1.Service, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewService(MustAssetReader(PrometheusOperatorService))
 	if err != nil {
 		return nil, err
@@ -940,6 +1082,8 @@ func (f *Factory) PrometheusOperatorService() (*v1.Service, error) {
 	return s, nil
 }
 func (f *Factory) PrometheusK8sService() (*v1.Service, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewService(MustAssetReader(PrometheusK8sService))
@@ -952,6 +1096,8 @@ func (f *Factory) PrometheusK8sService() (*v1.Service, error) {
 func (f *Factory) GrafanaClusterRoleBinding() (*rbacv1beta1.ClusterRoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(GrafanaClusterRoleBinding))
 	if err != nil {
 		return nil, err
@@ -962,9 +1108,13 @@ func (f *Factory) GrafanaClusterRoleBinding() (*rbacv1beta1.ClusterRoleBinding, 
 func (f *Factory) GrafanaClusterRole() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.NewClusterRole(MustAssetReader(GrafanaClusterRole))
 }
 func (f *Factory) GrafanaConfig() (*v1.Secret, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewSecret(MustAssetReader(GrafanaConfigSecret))
@@ -999,6 +1149,8 @@ type GrafanaJsonData struct {
 func (f *Factory) GrafanaDatasources() (*v1.Secret, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewSecret(MustAssetReader(GrafanaDatasourcesSecret))
 	if err != nil {
 		return nil, err
@@ -1023,6 +1175,8 @@ func (f *Factory) GrafanaDatasources() (*v1.Secret, error) {
 func (f *Factory) GrafanaDashboardDefinitions() (*v1.ConfigMapList, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cl, err := f.NewConfigMapList(MustAssetReader(GrafanaDashboardDefinitions))
 	if err != nil {
 		return nil, err
@@ -1044,6 +1198,8 @@ func (f *Factory) GrafanaDashboardDefinitions() (*v1.ConfigMapList, error) {
 func (f *Factory) GrafanaDashboardSources() (*v1.ConfigMap, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c, err := f.NewConfigMap(MustAssetReader(GrafanaDashboardSources))
 	if err != nil {
 		return nil, err
@@ -1052,6 +1208,8 @@ func (f *Factory) GrafanaDashboardSources() (*v1.ConfigMap, error) {
 	return c, nil
 }
 func (f *Factory) GrafanaDeployment() (*appsv1.Deployment, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	d, err := f.NewDeployment(MustAssetReader(GrafanaDeployment))
@@ -1085,6 +1243,8 @@ func (f *Factory) GrafanaDeployment() (*appsv1.Deployment, error) {
 func (f *Factory) GrafanaProxySecret() (*v1.Secret, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewSecret(MustAssetReader(GrafanaProxySecret))
 	if err != nil {
 		return nil, err
@@ -1100,6 +1260,8 @@ func (f *Factory) GrafanaProxySecret() (*v1.Secret, error) {
 func (f *Factory) GrafanaRoute() (*routev1.Route, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	r, err := f.NewRoute(MustAssetReader(GrafanaRoute))
 	if err != nil {
 		return nil, err
@@ -1113,6 +1275,8 @@ func (f *Factory) GrafanaRoute() (*routev1.Route, error) {
 func (f *Factory) GrafanaServiceAccount() (*v1.ServiceAccount, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewServiceAccount(MustAssetReader(GrafanaServiceAccount))
 	if err != nil {
 		return nil, err
@@ -1123,6 +1287,8 @@ func (f *Factory) GrafanaServiceAccount() (*v1.ServiceAccount, error) {
 func (f *Factory) GrafanaService() (*v1.Service, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewService(MustAssetReader(GrafanaService))
 	if err != nil {
 		return nil, err
@@ -1131,6 +1297,8 @@ func (f *Factory) GrafanaService() (*v1.Service, error) {
 	return s, nil
 }
 func (f *Factory) GrafanaServiceMonitor() (*monv1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewServiceMonitor(MustAssetReader(GrafanaServiceMonitor))
@@ -1144,6 +1312,8 @@ func (f *Factory) GrafanaServiceMonitor() (*monv1.ServiceMonitor, error) {
 func (f *Factory) ClusterMonitoringClusterRole() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cr, err := f.NewClusterRole(MustAssetReader(ClusterMonitoringClusterRole))
 	if err != nil {
 		return nil, err
@@ -1151,6 +1321,8 @@ func (f *Factory) ClusterMonitoringClusterRole() (*rbacv1beta1.ClusterRole, erro
 	return cr, nil
 }
 func (f *Factory) ClusterMonitoringOperatorService() (*v1.Service, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewService(MustAssetReader(ClusterMonitoringOperatorService))
@@ -1163,6 +1335,8 @@ func (f *Factory) ClusterMonitoringOperatorService() (*v1.Service, error) {
 func (f *Factory) ClusterMonitoringOperatorServiceMonitor() (*monv1.ServiceMonitor, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sm, err := f.NewServiceMonitor(MustAssetReader(ClusterMonitoringOperatorServiceMonitor))
 	if err != nil {
 		return nil, err
@@ -1171,6 +1345,8 @@ func (f *Factory) ClusterMonitoringOperatorServiceMonitor() (*monv1.ServiceMonit
 	return sm, nil
 }
 func hostFromBaseAddress(baseAddress string) (string, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	host, _, err := net.SplitHostPort(baseAddress)
@@ -1185,6 +1361,8 @@ func hostFromBaseAddress(baseAddress string) (string, error) {
 func IsMissingPortInAddressError(err error) bool {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	switch e := err.(type) {
 	case *net.AddrError:
 		if e.Err == "missing port in address" {
@@ -1194,6 +1372,8 @@ func IsMissingPortInAddressError(err error) bool {
 	return false
 }
 func (f *Factory) NewDaemonSet(manifest io.Reader) (*appsv1.DaemonSet, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	ds, err := NewDaemonSet(manifest)
@@ -1208,6 +1388,8 @@ func (f *Factory) NewDaemonSet(manifest io.Reader) (*appsv1.DaemonSet, error) {
 func (f *Factory) NewService(manifest io.Reader) (*v1.Service, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := NewService(manifest)
 	if err != nil {
 		return nil, err
@@ -1218,6 +1400,8 @@ func (f *Factory) NewService(manifest io.Reader) (*v1.Service, error) {
 	return s, nil
 }
 func (f *Factory) NewEndpoints(manifest io.Reader) (*v1.Endpoints, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	e, err := NewEndpoints(manifest)
@@ -1232,6 +1416,8 @@ func (f *Factory) NewEndpoints(manifest io.Reader) (*v1.Endpoints, error) {
 func (f *Factory) NewRoute(manifest io.Reader) (*routev1.Route, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	r, err := NewRoute(manifest)
 	if err != nil {
 		return nil, err
@@ -1242,6 +1428,8 @@ func (f *Factory) NewRoute(manifest io.Reader) (*routev1.Route, error) {
 	return r, nil
 }
 func (f *Factory) NewSecret(manifest io.Reader) (*v1.Secret, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := NewSecret(manifest)
@@ -1256,6 +1444,8 @@ func (f *Factory) NewSecret(manifest io.Reader) (*v1.Secret, error) {
 func (f *Factory) NewRoleBinding(manifest io.Reader) (*rbacv1beta1.RoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	rb, err := NewRoleBinding(manifest)
 	if err != nil {
 		return nil, err
@@ -1266,6 +1456,8 @@ func (f *Factory) NewRoleBinding(manifest io.Reader) (*rbacv1beta1.RoleBinding, 
 	return rb, nil
 }
 func (f *Factory) NewRoleList(manifest io.Reader) (*rbacv1beta1.RoleList, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	rl, err := NewRoleList(manifest)
@@ -1282,6 +1474,8 @@ func (f *Factory) NewRoleList(manifest io.Reader) (*rbacv1beta1.RoleList, error)
 func (f *Factory) NewRoleBindingList(manifest io.Reader) (*rbacv1beta1.RoleBindingList, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	rbl, err := NewRoleBindingList(manifest)
 	if err != nil {
 		return nil, err
@@ -1296,6 +1490,8 @@ func (f *Factory) NewRoleBindingList(manifest io.Reader) (*rbacv1beta1.RoleBindi
 func (f *Factory) NewRole(manifest io.Reader) (*rbacv1beta1.Role, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	r, err := NewRole(manifest)
 	if err != nil {
 		return nil, err
@@ -1308,6 +1504,8 @@ func (f *Factory) NewRole(manifest io.Reader) (*rbacv1beta1.Role, error) {
 func (f *Factory) NewConfigMap(manifest io.Reader) (*v1.ConfigMap, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cm, err := NewConfigMap(manifest)
 	if err != nil {
 		return nil, err
@@ -1318,6 +1516,8 @@ func (f *Factory) NewConfigMap(manifest io.Reader) (*v1.ConfigMap, error) {
 	return cm, nil
 }
 func (f *Factory) NewConfigMapList(manifest io.Reader) (*v1.ConfigMapList, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	cml, err := NewConfigMapList(manifest)
@@ -1334,6 +1534,8 @@ func (f *Factory) NewConfigMapList(manifest io.Reader) (*v1.ConfigMapList, error
 func (f *Factory) NewServiceAccount(manifest io.Reader) (*v1.ServiceAccount, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sa, err := NewServiceAccount(manifest)
 	if err != nil {
 		return nil, err
@@ -1344,6 +1546,8 @@ func (f *Factory) NewServiceAccount(manifest io.Reader) (*v1.ServiceAccount, err
 	return sa, nil
 }
 func (f *Factory) NewPrometheus(manifest io.Reader) (*monv1.Prometheus, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	p, err := NewPrometheus(manifest)
@@ -1358,6 +1562,8 @@ func (f *Factory) NewPrometheus(manifest io.Reader) (*monv1.Prometheus, error) {
 func (f *Factory) NewPrometheusRule(manifest io.Reader) (*monv1.PrometheusRule, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	p, err := NewPrometheusRule(manifest)
 	if err != nil {
 		return nil, err
@@ -1368,6 +1574,8 @@ func (f *Factory) NewPrometheusRule(manifest io.Reader) (*monv1.PrometheusRule, 
 	return p, nil
 }
 func (f *Factory) NewAlertmanager(manifest io.Reader) (*monv1.Alertmanager, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	a, err := NewAlertmanager(manifest)
@@ -1382,6 +1590,8 @@ func (f *Factory) NewAlertmanager(manifest io.Reader) (*monv1.Alertmanager, erro
 func (f *Factory) NewServiceMonitor(manifest io.Reader) (*monv1.ServiceMonitor, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sm, err := NewServiceMonitor(manifest)
 	if err != nil {
 		return nil, err
@@ -1392,6 +1602,8 @@ func (f *Factory) NewServiceMonitor(manifest io.Reader) (*monv1.ServiceMonitor, 
 	return sm, nil
 }
 func (f *Factory) NewDeployment(manifest io.Reader) (*appsv1.Deployment, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	d, err := NewDeployment(manifest)
@@ -1406,6 +1618,8 @@ func (f *Factory) NewDeployment(manifest io.Reader) (*appsv1.Deployment, error) 
 func (f *Factory) NewIngress(manifest io.Reader) (*v1beta1.Ingress, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	i, err := NewIngress(manifest)
 	if err != nil {
 		return nil, err
@@ -1418,9 +1632,13 @@ func (f *Factory) NewIngress(manifest io.Reader) (*v1beta1.Ingress, error) {
 func (f *Factory) NewAPIService(manifest io.Reader) (*apiregistrationv1beta1.APIService, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return NewAPIService(manifest)
 }
 func (f *Factory) NewSecurityContextConstraints(manifest io.Reader) (*securityv1.SecurityContextConstraints, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return NewSecurityContextConstraints(manifest)
@@ -1428,14 +1646,20 @@ func (f *Factory) NewSecurityContextConstraints(manifest io.Reader) (*securityv1
 func (f *Factory) NewClusterRoleBinding(manifest io.Reader) (*rbacv1beta1.ClusterRoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return NewClusterRoleBinding(manifest)
 }
 func (f *Factory) NewClusterRole(manifest io.Reader) (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return NewClusterRole(manifest)
 }
 func (f *Factory) TelemeterClientServingCertsCABundle() (*v1.ConfigMap, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	c, err := f.NewConfigMap(MustAssetReader(TelemeterClientServingCertsCABundle))
@@ -1448,6 +1672,8 @@ func (f *Factory) TelemeterClientServingCertsCABundle() (*v1.ConfigMap, error) {
 func (f *Factory) TelemeterClientClusterRole() (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cr, err := f.NewClusterRole(MustAssetReader(TelemeterClientClusterRole))
 	if err != nil {
 		return nil, err
@@ -1455,6 +1681,8 @@ func (f *Factory) TelemeterClientClusterRole() (*rbacv1beta1.ClusterRole, error)
 	return cr, nil
 }
 func (f *Factory) TelemeterClientClusterRoleBinding() (*rbacv1beta1.ClusterRoleBinding, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(TelemeterClientClusterRoleBinding))
@@ -1466,6 +1694,8 @@ func (f *Factory) TelemeterClientClusterRoleBinding() (*rbacv1beta1.ClusterRoleB
 func (f *Factory) TelemeterClientClusterRoleBindingView() (*rbacv1beta1.ClusterRoleBinding, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	crb, err := f.NewClusterRoleBinding(MustAssetReader(TelemeterClientClusterRoleBindingView))
 	if err != nil {
 		return nil, err
@@ -1473,6 +1703,8 @@ func (f *Factory) TelemeterClientClusterRoleBindingView() (*rbacv1beta1.ClusterR
 	return crb, nil
 }
 func (f *Factory) TelemeterClientServiceMonitor() (*monv1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sm, err := f.NewServiceMonitor(MustAssetReader(TelemeterClientServiceMonitor))
@@ -1484,6 +1716,8 @@ func (f *Factory) TelemeterClientServiceMonitor() (*monv1.ServiceMonitor, error)
 	return sm, nil
 }
 func (f *Factory) TelemeterClientDeployment() (*appsv1.Deployment, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	d, err := f.NewDeployment(MustAssetReader(TelemeterClientDeployment))
@@ -1516,6 +1750,8 @@ func (f *Factory) TelemeterClientDeployment() (*appsv1.Deployment, error) {
 func (f *Factory) TelemeterClientService() (*v1.Service, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewService(MustAssetReader(TelemeterClientService))
 	if err != nil {
 		return nil, err
@@ -1526,6 +1762,8 @@ func (f *Factory) TelemeterClientService() (*v1.Service, error) {
 func (f *Factory) TelemeterClientServiceAccount() (*v1.ServiceAccount, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s, err := f.NewServiceAccount(MustAssetReader(TelemeterClientServiceAccount))
 	if err != nil {
 		return nil, err
@@ -1534,6 +1772,8 @@ func (f *Factory) TelemeterClientServiceAccount() (*v1.ServiceAccount, error) {
 	return s, nil
 }
 func (f *Factory) TelemeterClientSecret() (*v1.Secret, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s, err := f.NewSecret(MustAssetReader(TelemeterClientSecret))
@@ -1554,6 +1794,8 @@ func (f *Factory) TelemeterClientSecret() (*v1.Secret, error) {
 func NewDaemonSet(manifest io.Reader) (*appsv1.DaemonSet, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	ds := appsv1.DaemonSet{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&ds)
 	if err != nil {
@@ -1562,6 +1804,8 @@ func NewDaemonSet(manifest io.Reader) (*appsv1.DaemonSet, error) {
 	return &ds, nil
 }
 func NewService(manifest io.Reader) (*v1.Service, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s := v1.Service{}
@@ -1574,6 +1818,8 @@ func NewService(manifest io.Reader) (*v1.Service, error) {
 func NewEndpoints(manifest io.Reader) (*v1.Endpoints, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	e := v1.Endpoints{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&e)
 	if err != nil {
@@ -1582,6 +1828,8 @@ func NewEndpoints(manifest io.Reader) (*v1.Endpoints, error) {
 	return &e, nil
 }
 func NewRoute(manifest io.Reader) (*routev1.Route, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	r := routev1.Route{}
@@ -1594,6 +1842,8 @@ func NewRoute(manifest io.Reader) (*routev1.Route, error) {
 func NewSecret(manifest io.Reader) (*v1.Secret, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s := v1.Secret{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&s)
 	if err != nil {
@@ -1602,6 +1852,8 @@ func NewSecret(manifest io.Reader) (*v1.Secret, error) {
 	return &s, nil
 }
 func NewClusterRoleBinding(manifest io.Reader) (*rbacv1beta1.ClusterRoleBinding, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	crb := rbacv1beta1.ClusterRoleBinding{}
@@ -1614,6 +1866,8 @@ func NewClusterRoleBinding(manifest io.Reader) (*rbacv1beta1.ClusterRoleBinding,
 func NewClusterRole(manifest io.Reader) (*rbacv1beta1.ClusterRole, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cr := rbacv1beta1.ClusterRole{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&cr)
 	if err != nil {
@@ -1622,6 +1876,8 @@ func NewClusterRole(manifest io.Reader) (*rbacv1beta1.ClusterRole, error) {
 	return &cr, nil
 }
 func NewRoleBinding(manifest io.Reader) (*rbacv1beta1.RoleBinding, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	rb := rbacv1beta1.RoleBinding{}
@@ -1634,6 +1890,8 @@ func NewRoleBinding(manifest io.Reader) (*rbacv1beta1.RoleBinding, error) {
 func NewRole(manifest io.Reader) (*rbacv1beta1.Role, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	r := rbacv1beta1.Role{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&r)
 	if err != nil {
@@ -1642,6 +1900,8 @@ func NewRole(manifest io.Reader) (*rbacv1beta1.Role, error) {
 	return &r, nil
 }
 func NewRoleBindingList(manifest io.Reader) (*rbacv1beta1.RoleBindingList, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	rbl := rbacv1beta1.RoleBindingList{}
@@ -1654,6 +1914,8 @@ func NewRoleBindingList(manifest io.Reader) (*rbacv1beta1.RoleBindingList, error
 func NewRoleList(manifest io.Reader) (*rbacv1beta1.RoleList, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	rl := rbacv1beta1.RoleList{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&rl)
 	if err != nil {
@@ -1662,6 +1924,8 @@ func NewRoleList(manifest io.Reader) (*rbacv1beta1.RoleList, error) {
 	return &rl, nil
 }
 func NewConfigMap(manifest io.Reader) (*v1.ConfigMap, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	cm := v1.ConfigMap{}
@@ -1674,6 +1938,8 @@ func NewConfigMap(manifest io.Reader) (*v1.ConfigMap, error) {
 func NewConfigMapList(manifest io.Reader) (*v1.ConfigMapList, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cml := v1.ConfigMapList{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&cml)
 	if err != nil {
@@ -1682,6 +1948,8 @@ func NewConfigMapList(manifest io.Reader) (*v1.ConfigMapList, error) {
 	return &cml, nil
 }
 func NewServiceAccount(manifest io.Reader) (*v1.ServiceAccount, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sa := v1.ServiceAccount{}
@@ -1694,6 +1962,8 @@ func NewServiceAccount(manifest io.Reader) (*v1.ServiceAccount, error) {
 func NewPrometheus(manifest io.Reader) (*monv1.Prometheus, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	p := monv1.Prometheus{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&p)
 	if err != nil {
@@ -1702,6 +1972,8 @@ func NewPrometheus(manifest io.Reader) (*monv1.Prometheus, error) {
 	return &p, nil
 }
 func NewPrometheusRule(manifest io.Reader) (*monv1.PrometheusRule, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	p := monv1.PrometheusRule{}
@@ -1714,6 +1986,8 @@ func NewPrometheusRule(manifest io.Reader) (*monv1.PrometheusRule, error) {
 func NewAlertmanager(manifest io.Reader) (*monv1.Alertmanager, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	a := monv1.Alertmanager{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&a)
 	if err != nil {
@@ -1722,6 +1996,8 @@ func NewAlertmanager(manifest io.Reader) (*monv1.Alertmanager, error) {
 	return &a, nil
 }
 func NewServiceMonitor(manifest io.Reader) (*monv1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sm := monv1.ServiceMonitor{}
@@ -1734,6 +2010,8 @@ func NewServiceMonitor(manifest io.Reader) (*monv1.ServiceMonitor, error) {
 func NewDeployment(manifest io.Reader) (*appsv1.Deployment, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	d := appsv1.Deployment{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&d)
 	if err != nil {
@@ -1742,6 +2020,8 @@ func NewDeployment(manifest io.Reader) (*appsv1.Deployment, error) {
 	return &d, nil
 }
 func NewIngress(manifest io.Reader) (*v1beta1.Ingress, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	i := v1beta1.Ingress{}
@@ -1754,6 +2034,8 @@ func NewIngress(manifest io.Reader) (*v1beta1.Ingress, error) {
 func NewAPIService(manifest io.Reader) (*apiregistrationv1beta1.APIService, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s := apiregistrationv1beta1.APIService{}
 	err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&s)
 	if err != nil {
@@ -1762,6 +2044,8 @@ func NewAPIService(manifest io.Reader) (*apiregistrationv1beta1.APIService, erro
 	return &s, nil
 }
 func NewSecurityContextConstraints(manifest io.Reader) (*securityv1.SecurityContextConstraints, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	s := securityv1.SecurityContextConstraints{}

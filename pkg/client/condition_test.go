@@ -12,6 +12,8 @@ import (
 func TestConditions(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	type checkFunc func(*conditions) error
 	hasConditions := func(want []configv1.ClusterOperatorStatusCondition) checkFunc {
 		return func(cs *conditions) error {

@@ -13,6 +13,8 @@ type conditions struct {
 func newConditions(cos v1.ClusterOperatorStatus, targetVersion string, time metav1.Time) *conditions {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	entries := map[v1.ClusterStatusConditionType]v1.ClusterOperatorStatusCondition{v1.OperatorAvailable: {Type: v1.OperatorAvailable, Status: v1.ConditionUnknown, LastTransitionTime: time}, v1.OperatorProgressing: {Type: v1.OperatorProgressing, Status: v1.ConditionUnknown, LastTransitionTime: time}, v1.OperatorFailing: {Type: v1.OperatorFailing, Status: v1.ConditionUnknown, LastTransitionTime: time}}
 	for _, c := range cos.Conditions {
 		entries[c.Type] = c
@@ -25,6 +27,8 @@ func newConditions(cos v1.ClusterOperatorStatus, targetVersion string, time meta
 	return cs
 }
 func (cs *conditions) setCondition(condition v1.ClusterStatusConditionType, status v1.ConditionStatus, message string, time metav1.Time) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	entries := make(map[v1.ClusterStatusConditionType]v1.ClusterOperatorStatusCondition)
@@ -47,6 +51,8 @@ func (cs *conditions) setCondition(condition v1.ClusterStatusConditionType, stat
 func (cs *conditions) entries() []v1.ClusterOperatorStatusCondition {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	var res []v1.ClusterOperatorStatusCondition
 	for _, v := range cs.entryMap {
 		res = append(res, v)
@@ -59,14 +65,20 @@ type byType []v1.ClusterOperatorStatusCondition
 func (b byType) Len() int {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return len(b)
 }
 func (b byType) Swap(i, j int) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	b[i], b[j] = b[j], b[i]
 }
 func (b byType) Less(i, j int) bool {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return b[i].Type < b[j].Type

@@ -13,9 +13,13 @@ type errMapReader struct {
 func newErrMapReader(src map[string]string) *errMapReader {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &errMapReader{src: src}
 }
 func (r *errMapReader) value(key string) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if r.err != nil {
@@ -29,6 +33,8 @@ func (r *errMapReader) value(key string) string {
 	return result
 }
 func (r *errMapReader) slice(key string) []string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if r.err != nil {
@@ -49,6 +55,8 @@ func (r *errMapReader) slice(key string) []string {
 	return ret
 }
 func (r *errMapReader) Error() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return r.err

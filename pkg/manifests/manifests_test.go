@@ -13,6 +13,8 @@ import (
 func TestUnconfiguredManifests(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	f := NewFactory("openshift-monitoring", NewDefaultConfig())
 	_, err := f.AlertmanagerConfig()
 	if err != nil {
@@ -276,6 +278,8 @@ func TestUnconfiguredManifests(t *testing.T) {
 func TestHTTPConfig(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	type checkFunc func(*monv1.Alertmanager) error
 	checks := func(cs ...checkFunc) checkFunc {
 		return func(a *monv1.Alertmanager) error {
@@ -350,6 +354,8 @@ func TestHTTPConfig(t *testing.T) {
 func TestPrometheusOperatorConfiguration(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c, err := NewConfigFromString(`prometheusOperator:
   nodeSelector:
     type: master
@@ -402,6 +408,8 @@ func TestPrometheusOperatorConfiguration(t *testing.T) {
 	}
 }
 func TestPrometheusK8sConfiguration(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	c, err := NewConfigFromString(`prometheusK8s:
@@ -484,6 +492,8 @@ ingress:
 func TestK8sPrometheusAdapterConfiguration(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c, err := NewConfigFromString(`
 k8sPrometheusAdapter:
   nodeSelector:
@@ -507,6 +517,8 @@ k8sPrometheusAdapter:
 	}
 }
 func TestAlertmanagerMainConfiguration(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	c, err := NewConfigFromString(`alertmanagerMain:
@@ -572,6 +584,8 @@ ingress:
 func TestNodeExporter(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c, err := NewConfigFromString(``)
 	if err != nil {
 		t.Fatal(err)
@@ -590,6 +604,8 @@ func TestNodeExporter(t *testing.T) {
 	}
 }
 func TestKubeStateMetrics(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	c, err := NewConfigFromString(``)
@@ -615,6 +631,8 @@ func TestKubeStateMetrics(t *testing.T) {
 func TestPrometheusEtcdRulesFiltered(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	enabled := false
 	c := NewDefaultConfig()
 	c.EtcdConfig.Enabled = &enabled
@@ -630,6 +648,8 @@ func TestPrometheusEtcdRulesFiltered(t *testing.T) {
 	}
 }
 func TestPrometheusEtcdRules(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	enabled := true
@@ -653,6 +673,8 @@ func TestPrometheusEtcdRules(t *testing.T) {
 func TestEtcdGrafanaDashboardFiltered(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	enabled := false
 	c := NewDefaultConfig()
 	c.EtcdConfig.Enabled = &enabled
@@ -668,6 +690,8 @@ func TestEtcdGrafanaDashboardFiltered(t *testing.T) {
 	}
 }
 func TestEtcdGrafanaDashboard(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	enabled := true

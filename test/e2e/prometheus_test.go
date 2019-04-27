@@ -14,6 +14,8 @@ import (
 func TestPrometheusVolumeClaim(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	err := f.OperatorClient.WaitForStatefulsetRollout(&v1beta2.StatefulSet{ObjectMeta: metav1.ObjectMeta{Name: "prometheus-k8s", Namespace: f.Ns}})
 	if err != nil {
 		log.Fatal(err)

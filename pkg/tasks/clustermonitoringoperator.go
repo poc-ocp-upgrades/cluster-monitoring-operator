@@ -14,9 +14,13 @@ type ClusterMonitoringOperatorTask struct {
 func NewClusterMonitoringOperatorTask(client *client.Client, factory *manifests.Factory) *ClusterMonitoringOperatorTask {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &ClusterMonitoringOperatorTask{client: client, factory: factory}
 }
 func (t *ClusterMonitoringOperatorTask) Run() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	svc, err := t.factory.ClusterMonitoringOperatorService()

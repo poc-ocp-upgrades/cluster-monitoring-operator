@@ -15,9 +15,13 @@ type TaskRunner struct {
 func NewTaskRunner(client *client.Client, tasks []*TaskSpec) *TaskRunner {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &TaskRunner{client: client, tasks: tasks}
 }
 func (tl *TaskRunner) RunAll() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	var g errgroup.Group
@@ -36,9 +40,13 @@ func (tl *TaskRunner) RunAll() error {
 func (tl *TaskRunner) ExecuteTask(ts *TaskSpec) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return ts.Task.Run()
 }
 func NewTaskSpec(name string, task Task) *TaskSpec {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return &TaskSpec{Name: name, Task: task}

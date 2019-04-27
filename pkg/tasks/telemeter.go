@@ -15,9 +15,13 @@ type TelemeterClientTask struct {
 func NewTelemeterClientTask(client *client.Client, factory *manifests.Factory, config *manifests.TelemeterClientConfig) *TelemeterClientTask {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &TelemeterClientTask{client: client, factory: factory, config: config}
 }
 func (t *TelemeterClientTask) Run() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if t.config.IsEnabled() {
@@ -26,6 +30,8 @@ func (t *TelemeterClientTask) Run() error {
 	return t.destroy()
 }
 func (t *TelemeterClientTask) create() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	cacm, err := t.factory.TelemeterClientServingCertsCABundle()
@@ -100,6 +106,8 @@ func (t *TelemeterClientTask) create() error {
 	return errors.Wrap(err, "reconciling Telemeter client ServiceMonitor failed")
 }
 func (t *TelemeterClientTask) destroy() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	dep, err := t.factory.TelemeterClientDeployment()

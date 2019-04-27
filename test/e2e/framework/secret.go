@@ -11,6 +11,8 @@ import (
 func CreateSecret(kubeClient kubernetes.Interface, namespace string, relativePath string) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	secret, err := parseSecretYaml(relativePath)
 	if err != nil {
 		return errors.Wrap(err, "parsing secret failed")
@@ -21,6 +23,8 @@ func CreateSecret(kubeClient kubernetes.Interface, namespace string, relativePat
 	return nil
 }
 func parseSecretYaml(relativePath string) (*v1.Secret, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	manifest, err := poTestFramework.PathToOSFile(relativePath)

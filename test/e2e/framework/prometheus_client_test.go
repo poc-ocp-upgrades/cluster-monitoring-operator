@@ -7,6 +7,8 @@ import (
 func TestGetFirstValueFromPromQuery(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	tests := []struct {
 		Name	string
 		F	func(t *testing.T)

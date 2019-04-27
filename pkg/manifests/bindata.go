@@ -18,6 +18,8 @@ import (
 func bindataRead(data []byte, name string) ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	gz, err := gzip.NewReader(bytes.NewBuffer(data))
 	if err != nil {
 		return nil, fmt.Errorf("Read %q: %v", name, err)
@@ -48,9 +50,13 @@ type bindataFileInfo struct {
 func (fi bindataFileInfo) Name() string {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return fi.name
 }
 func (fi bindataFileInfo) Size() int64 {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return fi.size
@@ -58,9 +64,13 @@ func (fi bindataFileInfo) Size() int64 {
 func (fi bindataFileInfo) Mode() os.FileMode {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return fi.mode
 }
 func (fi bindataFileInfo) ModTime() time.Time {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return fi.modTime
@@ -68,9 +78,13 @@ func (fi bindataFileInfo) ModTime() time.Time {
 func (fi bindataFileInfo) IsDir() bool {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return false
 }
 func (fi bindataFileInfo) Sys() interface{} {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	return nil
@@ -81,9 +95,13 @@ var _assetsAlertmanagerAlertmanagerYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x
 func assetsAlertmanagerAlertmanagerYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsAlertmanagerAlertmanagerYaml, "assets/alertmanager/alertmanager.yaml")
 }
 func assetsAlertmanagerAlertmanagerYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsAlertmanagerAlertmanagerYamlBytes()
@@ -100,9 +118,13 @@ var _assetsAlertmanagerClusterRoleBindingYaml = []byte("\x1f\x8b\x08\x00\x00\x00
 func assetsAlertmanagerClusterRoleBindingYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsAlertmanagerClusterRoleBindingYaml, "assets/alertmanager/cluster-role-binding.yaml")
 }
 func assetsAlertmanagerClusterRoleBindingYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsAlertmanagerClusterRoleBindingYamlBytes()
@@ -119,9 +141,13 @@ var _assetsAlertmanagerClusterRoleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x0
 func assetsAlertmanagerClusterRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsAlertmanagerClusterRoleYaml, "assets/alertmanager/cluster-role.yaml")
 }
 func assetsAlertmanagerClusterRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsAlertmanagerClusterRoleYamlBytes()
@@ -138,9 +164,13 @@ var _assetsAlertmanagerProxySecretYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x0
 func assetsAlertmanagerProxySecretYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsAlertmanagerProxySecretYaml, "assets/alertmanager/proxy-secret.yaml")
 }
 func assetsAlertmanagerProxySecretYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsAlertmanagerProxySecretYamlBytes()
@@ -157,9 +187,13 @@ var _assetsAlertmanagerRouteYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\
 func assetsAlertmanagerRouteYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsAlertmanagerRouteYaml, "assets/alertmanager/route.yaml")
 }
 func assetsAlertmanagerRouteYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsAlertmanagerRouteYamlBytes()
@@ -176,9 +210,13 @@ var _assetsAlertmanagerSecretYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00
 func assetsAlertmanagerSecretYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsAlertmanagerSecretYaml, "assets/alertmanager/secret.yaml")
 }
 func assetsAlertmanagerSecretYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsAlertmanagerSecretYamlBytes()
@@ -195,9 +233,13 @@ var _assetsAlertmanagerServiceAccountYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00
 func assetsAlertmanagerServiceAccountYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsAlertmanagerServiceAccountYaml, "assets/alertmanager/service-account.yaml")
 }
 func assetsAlertmanagerServiceAccountYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsAlertmanagerServiceAccountYamlBytes()
@@ -214,9 +256,13 @@ var _assetsAlertmanagerServiceMonitorYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00
 func assetsAlertmanagerServiceMonitorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsAlertmanagerServiceMonitorYaml, "assets/alertmanager/service-monitor.yaml")
 }
 func assetsAlertmanagerServiceMonitorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsAlertmanagerServiceMonitorYamlBytes()
@@ -233,9 +279,13 @@ var _assetsAlertmanagerServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x0
 func assetsAlertmanagerServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsAlertmanagerServiceYaml, "assets/alertmanager/service.yaml")
 }
 func assetsAlertmanagerServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsAlertmanagerServiceYamlBytes()
@@ -252,9 +302,13 @@ var _assetsClusterMonitoringOperatorClusterRoleYaml = []byte("\x1f\x8b\x08\x00\x
 func assetsClusterMonitoringOperatorClusterRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsClusterMonitoringOperatorClusterRoleYaml, "assets/cluster-monitoring-operator/cluster-role.yaml")
 }
 func assetsClusterMonitoringOperatorClusterRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsClusterMonitoringOperatorClusterRoleYamlBytes()
@@ -271,9 +325,13 @@ var _assetsClusterMonitoringOperatorServiceMonitorYaml = []byte("\x1f\x8b\x08\x0
 func assetsClusterMonitoringOperatorServiceMonitorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsClusterMonitoringOperatorServiceMonitorYaml, "assets/cluster-monitoring-operator/service-monitor.yaml")
 }
 func assetsClusterMonitoringOperatorServiceMonitorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsClusterMonitoringOperatorServiceMonitorYamlBytes()
@@ -290,9 +348,13 @@ var _assetsClusterMonitoringOperatorServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x
 func assetsClusterMonitoringOperatorServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsClusterMonitoringOperatorServiceYaml, "assets/cluster-monitoring-operator/service.yaml")
 }
 func assetsClusterMonitoringOperatorServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsClusterMonitoringOperatorServiceYamlBytes()
@@ -309,9 +371,13 @@ var _assetsGrafanaClusterRoleBindingYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\
 func assetsGrafanaClusterRoleBindingYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaClusterRoleBindingYaml, "assets/grafana/cluster-role-binding.yaml")
 }
 func assetsGrafanaClusterRoleBindingYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaClusterRoleBindingYamlBytes()
@@ -328,9 +394,13 @@ var _assetsGrafanaClusterRoleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00
 func assetsGrafanaClusterRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaClusterRoleYaml, "assets/grafana/cluster-role.yaml")
 }
 func assetsGrafanaClusterRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaClusterRoleYamlBytes()
@@ -347,9 +417,13 @@ var _assetsGrafanaConfigYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\
 func assetsGrafanaConfigYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaConfigYaml, "assets/grafana/config.yaml")
 }
 func assetsGrafanaConfigYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaConfigYamlBytes()
@@ -366,9 +440,13 @@ var _assetsGrafanaDashboardDatasourcesYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x0
 func assetsGrafanaDashboardDatasourcesYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaDashboardDatasourcesYaml, "assets/grafana/dashboard-datasources.yaml")
 }
 func assetsGrafanaDashboardDatasourcesYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaDashboardDatasourcesYamlBytes()
@@ -385,9 +463,13 @@ var _assetsGrafanaDashboardDefinitionsYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x0
 func assetsGrafanaDashboardDefinitionsYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaDashboardDefinitionsYaml, "assets/grafana/dashboard-definitions.yaml")
 }
 func assetsGrafanaDashboardDefinitionsYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaDashboardDefinitionsYamlBytes()
@@ -404,9 +486,13 @@ var _assetsGrafanaDashboardSourcesYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x0
 func assetsGrafanaDashboardSourcesYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaDashboardSourcesYaml, "assets/grafana/dashboard-sources.yaml")
 }
 func assetsGrafanaDashboardSourcesYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaDashboardSourcesYamlBytes()
@@ -423,9 +509,13 @@ var _assetsGrafanaDeploymentYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\
 func assetsGrafanaDeploymentYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaDeploymentYaml, "assets/grafana/deployment.yaml")
 }
 func assetsGrafanaDeploymentYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaDeploymentYamlBytes()
@@ -442,9 +532,13 @@ var _assetsGrafanaProxySecretYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00
 func assetsGrafanaProxySecretYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaProxySecretYaml, "assets/grafana/proxy-secret.yaml")
 }
 func assetsGrafanaProxySecretYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaProxySecretYamlBytes()
@@ -461,9 +555,13 @@ var _assetsGrafanaRouteYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x
 func assetsGrafanaRouteYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaRouteYaml, "assets/grafana/route.yaml")
 }
 func assetsGrafanaRouteYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaRouteYamlBytes()
@@ -480,9 +578,13 @@ var _assetsGrafanaServiceAccountYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\
 func assetsGrafanaServiceAccountYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaServiceAccountYaml, "assets/grafana/service-account.yaml")
 }
 func assetsGrafanaServiceAccountYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaServiceAccountYamlBytes()
@@ -499,9 +601,13 @@ var _assetsGrafanaServiceMonitorYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\
 func assetsGrafanaServiceMonitorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaServiceMonitorYaml, "assets/grafana/service-monitor.yaml")
 }
 func assetsGrafanaServiceMonitorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaServiceMonitorYamlBytes()
@@ -518,9 +624,13 @@ var _assetsGrafanaServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff
 func assetsGrafanaServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsGrafanaServiceYaml, "assets/grafana/service.yaml")
 }
 func assetsGrafanaServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsGrafanaServiceYamlBytes()
@@ -537,9 +647,13 @@ var _assetsKubeStateMetricsClusterRoleBindingYaml = []byte("\x1f\x8b\x08\x00\x00
 func assetsKubeStateMetricsClusterRoleBindingYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsKubeStateMetricsClusterRoleBindingYaml, "assets/kube-state-metrics/cluster-role-binding.yaml")
 }
 func assetsKubeStateMetricsClusterRoleBindingYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsKubeStateMetricsClusterRoleBindingYamlBytes()
@@ -556,9 +670,13 @@ var _assetsKubeStateMetricsClusterRoleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x0
 func assetsKubeStateMetricsClusterRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsKubeStateMetricsClusterRoleYaml, "assets/kube-state-metrics/cluster-role.yaml")
 }
 func assetsKubeStateMetricsClusterRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsKubeStateMetricsClusterRoleYamlBytes()
@@ -575,9 +693,13 @@ var _assetsKubeStateMetricsDeploymentYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00
 func assetsKubeStateMetricsDeploymentYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsKubeStateMetricsDeploymentYaml, "assets/kube-state-metrics/deployment.yaml")
 }
 func assetsKubeStateMetricsDeploymentYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsKubeStateMetricsDeploymentYamlBytes()
@@ -594,9 +716,13 @@ var _assetsKubeStateMetricsRoleBindingYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x0
 func assetsKubeStateMetricsRoleBindingYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsKubeStateMetricsRoleBindingYaml, "assets/kube-state-metrics/role-binding.yaml")
 }
 func assetsKubeStateMetricsRoleBindingYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsKubeStateMetricsRoleBindingYamlBytes()
@@ -613,9 +739,13 @@ var _assetsKubeStateMetricsRoleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x
 func assetsKubeStateMetricsRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsKubeStateMetricsRoleYaml, "assets/kube-state-metrics/role.yaml")
 }
 func assetsKubeStateMetricsRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsKubeStateMetricsRoleYamlBytes()
@@ -632,9 +762,13 @@ var _assetsKubeStateMetricsServiceAccountYaml = []byte("\x1f\x8b\x08\x00\x00\x00
 func assetsKubeStateMetricsServiceAccountYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsKubeStateMetricsServiceAccountYaml, "assets/kube-state-metrics/service-account.yaml")
 }
 func assetsKubeStateMetricsServiceAccountYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsKubeStateMetricsServiceAccountYamlBytes()
@@ -651,9 +785,13 @@ var _assetsKubeStateMetricsServiceMonitorYaml = []byte("\x1f\x8b\x08\x00\x00\x00
 func assetsKubeStateMetricsServiceMonitorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsKubeStateMetricsServiceMonitorYaml, "assets/kube-state-metrics/service-monitor.yaml")
 }
 func assetsKubeStateMetricsServiceMonitorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsKubeStateMetricsServiceMonitorYamlBytes()
@@ -670,9 +808,13 @@ var _assetsKubeStateMetricsServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x0
 func assetsKubeStateMetricsServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsKubeStateMetricsServiceYaml, "assets/kube-state-metrics/service.yaml")
 }
 func assetsKubeStateMetricsServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsKubeStateMetricsServiceYamlBytes()
@@ -689,9 +831,13 @@ var _assetsNodeExporterClusterRoleBindingYaml = []byte("\x1f\x8b\x08\x00\x00\x00
 func assetsNodeExporterClusterRoleBindingYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsNodeExporterClusterRoleBindingYaml, "assets/node-exporter/cluster-role-binding.yaml")
 }
 func assetsNodeExporterClusterRoleBindingYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsNodeExporterClusterRoleBindingYamlBytes()
@@ -708,9 +854,13 @@ var _assetsNodeExporterClusterRoleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x0
 func assetsNodeExporterClusterRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsNodeExporterClusterRoleYaml, "assets/node-exporter/cluster-role.yaml")
 }
 func assetsNodeExporterClusterRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsNodeExporterClusterRoleYamlBytes()
@@ -727,9 +877,13 @@ var _assetsNodeExporterDaemonsetYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\
 func assetsNodeExporterDaemonsetYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsNodeExporterDaemonsetYaml, "assets/node-exporter/daemonset.yaml")
 }
 func assetsNodeExporterDaemonsetYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsNodeExporterDaemonsetYamlBytes()
@@ -746,9 +900,13 @@ var _assetsNodeExporterSecurityContextConstraintsYaml = []byte("\x1f\x8b\x08\x00
 func assetsNodeExporterSecurityContextConstraintsYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsNodeExporterSecurityContextConstraintsYaml, "assets/node-exporter/security-context-constraints.yaml")
 }
 func assetsNodeExporterSecurityContextConstraintsYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsNodeExporterSecurityContextConstraintsYamlBytes()
@@ -765,9 +923,13 @@ var _assetsNodeExporterServiceAccountYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00
 func assetsNodeExporterServiceAccountYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsNodeExporterServiceAccountYaml, "assets/node-exporter/service-account.yaml")
 }
 func assetsNodeExporterServiceAccountYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsNodeExporterServiceAccountYamlBytes()
@@ -784,9 +946,13 @@ var _assetsNodeExporterServiceMonitorYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00
 func assetsNodeExporterServiceMonitorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsNodeExporterServiceMonitorYaml, "assets/node-exporter/service-monitor.yaml")
 }
 func assetsNodeExporterServiceMonitorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsNodeExporterServiceMonitorYamlBytes()
@@ -803,9 +969,13 @@ var _assetsNodeExporterServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x0
 func assetsNodeExporterServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsNodeExporterServiceYaml, "assets/node-exporter/service.yaml")
 }
 func assetsNodeExporterServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsNodeExporterServiceYamlBytes()
@@ -822,9 +992,13 @@ var _assetsPrometheusAdapterApiServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x0
 func assetsPrometheusAdapterApiServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterApiServiceYaml, "assets/prometheus-adapter/api-service.yaml")
 }
 func assetsPrometheusAdapterApiServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterApiServiceYamlBytes()
@@ -841,9 +1015,13 @@ var _assetsPrometheusAdapterClusterRoleAggregatedMetricsReaderYaml = []byte("\x1
 func assetsPrometheusAdapterClusterRoleAggregatedMetricsReaderYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterClusterRoleAggregatedMetricsReaderYaml, "assets/prometheus-adapter/cluster-role-aggregated-metrics-reader.yaml")
 }
 func assetsPrometheusAdapterClusterRoleAggregatedMetricsReaderYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterClusterRoleAggregatedMetricsReaderYamlBytes()
@@ -860,9 +1038,13 @@ var _assetsPrometheusAdapterClusterRoleBindingDelegatorYaml = []byte("\x1f\x8b\x
 func assetsPrometheusAdapterClusterRoleBindingDelegatorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterClusterRoleBindingDelegatorYaml, "assets/prometheus-adapter/cluster-role-binding-delegator.yaml")
 }
 func assetsPrometheusAdapterClusterRoleBindingDelegatorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterClusterRoleBindingDelegatorYamlBytes()
@@ -879,9 +1061,13 @@ var _assetsPrometheusAdapterClusterRoleBindingViewYaml = []byte("\x1f\x8b\x08\x0
 func assetsPrometheusAdapterClusterRoleBindingViewYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterClusterRoleBindingViewYaml, "assets/prometheus-adapter/cluster-role-binding-view.yaml")
 }
 func assetsPrometheusAdapterClusterRoleBindingViewYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterClusterRoleBindingViewYamlBytes()
@@ -898,9 +1084,13 @@ var _assetsPrometheusAdapterClusterRoleBindingYaml = []byte("\x1f\x8b\x08\x00\x0
 func assetsPrometheusAdapterClusterRoleBindingYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterClusterRoleBindingYaml, "assets/prometheus-adapter/cluster-role-binding.yaml")
 }
 func assetsPrometheusAdapterClusterRoleBindingYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterClusterRoleBindingYamlBytes()
@@ -917,9 +1107,13 @@ var _assetsPrometheusAdapterClusterRoleServerResourcesYaml = []byte("\x1f\x8b\x0
 func assetsPrometheusAdapterClusterRoleServerResourcesYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterClusterRoleServerResourcesYaml, "assets/prometheus-adapter/cluster-role-server-resources.yaml")
 }
 func assetsPrometheusAdapterClusterRoleServerResourcesYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterClusterRoleServerResourcesYamlBytes()
@@ -936,9 +1130,13 @@ var _assetsPrometheusAdapterClusterRoleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x
 func assetsPrometheusAdapterClusterRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterClusterRoleYaml, "assets/prometheus-adapter/cluster-role.yaml")
 }
 func assetsPrometheusAdapterClusterRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterClusterRoleYamlBytes()
@@ -955,9 +1153,13 @@ var _assetsPrometheusAdapterConfigMapYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00
 func assetsPrometheusAdapterConfigMapYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterConfigMapYaml, "assets/prometheus-adapter/config-map.yaml")
 }
 func assetsPrometheusAdapterConfigMapYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterConfigMapYamlBytes()
@@ -974,9 +1176,13 @@ var _assetsPrometheusAdapterConfigmapPrometheusYaml = []byte("\x1f\x8b\x08\x00\x
 func assetsPrometheusAdapterConfigmapPrometheusYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterConfigmapPrometheusYaml, "assets/prometheus-adapter/configmap-prometheus.yaml")
 }
 func assetsPrometheusAdapterConfigmapPrometheusYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterConfigmapPrometheusYamlBytes()
@@ -993,9 +1199,13 @@ var _assetsPrometheusAdapterDeploymentYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x0
 func assetsPrometheusAdapterDeploymentYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterDeploymentYaml, "assets/prometheus-adapter/deployment.yaml")
 }
 func assetsPrometheusAdapterDeploymentYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterDeploymentYamlBytes()
@@ -1012,9 +1222,13 @@ var _assetsPrometheusAdapterRoleBindingAuthReaderYaml = []byte("\x1f\x8b\x08\x00
 func assetsPrometheusAdapterRoleBindingAuthReaderYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterRoleBindingAuthReaderYaml, "assets/prometheus-adapter/role-binding-auth-reader.yaml")
 }
 func assetsPrometheusAdapterRoleBindingAuthReaderYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterRoleBindingAuthReaderYamlBytes()
@@ -1031,9 +1245,13 @@ var _assetsPrometheusAdapterServiceAccountYaml = []byte("\x1f\x8b\x08\x00\x00\x0
 func assetsPrometheusAdapterServiceAccountYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterServiceAccountYaml, "assets/prometheus-adapter/service-account.yaml")
 }
 func assetsPrometheusAdapterServiceAccountYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterServiceAccountYamlBytes()
@@ -1050,9 +1268,13 @@ var _assetsPrometheusAdapterServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x
 func assetsPrometheusAdapterServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusAdapterServiceYaml, "assets/prometheus-adapter/service.yaml")
 }
 func assetsPrometheusAdapterServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusAdapterServiceYamlBytes()
@@ -1069,9 +1291,13 @@ var _assetsPrometheusK8sClusterRoleBindingYaml = []byte("\x1f\x8b\x08\x00\x00\x0
 func assetsPrometheusK8sClusterRoleBindingYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sClusterRoleBindingYaml, "assets/prometheus-k8s/cluster-role-binding.yaml")
 }
 func assetsPrometheusK8sClusterRoleBindingYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sClusterRoleBindingYamlBytes()
@@ -1088,9 +1314,13 @@ var _assetsPrometheusK8sClusterRoleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x
 func assetsPrometheusK8sClusterRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sClusterRoleYaml, "assets/prometheus-k8s/cluster-role.yaml")
 }
 func assetsPrometheusK8sClusterRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sClusterRoleYamlBytes()
@@ -1107,9 +1337,13 @@ var _assetsPrometheusK8sHtpasswdSecretYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x0
 func assetsPrometheusK8sHtpasswdSecretYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sHtpasswdSecretYaml, "assets/prometheus-k8s/htpasswd-secret.yaml")
 }
 func assetsPrometheusK8sHtpasswdSecretYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sHtpasswdSecretYamlBytes()
@@ -1126,9 +1360,13 @@ var _assetsPrometheusK8sKubeRbacProxySecretYaml = []byte("\x1f\x8b\x08\x00\x00\x
 func assetsPrometheusK8sKubeRbacProxySecretYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sKubeRbacProxySecretYaml, "assets/prometheus-k8s/kube-rbac-proxy-secret.yaml")
 }
 func assetsPrometheusK8sKubeRbacProxySecretYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sKubeRbacProxySecretYamlBytes()
@@ -1145,9 +1383,13 @@ var _assetsPrometheusK8sKubeletServingCaBundleYaml = []byte("\x1f\x8b\x08\x00\x0
 func assetsPrometheusK8sKubeletServingCaBundleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sKubeletServingCaBundleYaml, "assets/prometheus-k8s/kubelet-serving-ca-bundle.yaml")
 }
 func assetsPrometheusK8sKubeletServingCaBundleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sKubeletServingCaBundleYamlBytes()
@@ -1164,9 +1406,13 @@ var _assetsPrometheusK8sPrometheusYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x0
 func assetsPrometheusK8sPrometheusYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sPrometheusYaml, "assets/prometheus-k8s/prometheus.yaml")
 }
 func assetsPrometheusK8sPrometheusYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sPrometheusYamlBytes()
@@ -1183,9 +1429,13 @@ var _assetsPrometheusK8sProxySecretYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x
 func assetsPrometheusK8sProxySecretYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sProxySecretYaml, "assets/prometheus-k8s/proxy-secret.yaml")
 }
 func assetsPrometheusK8sProxySecretYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sProxySecretYamlBytes()
@@ -1202,9 +1452,13 @@ var _assetsPrometheusK8sRoleBindingConfigYaml = []byte("\x1f\x8b\x08\x00\x00\x00
 func assetsPrometheusK8sRoleBindingConfigYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sRoleBindingConfigYaml, "assets/prometheus-k8s/role-binding-config.yaml")
 }
 func assetsPrometheusK8sRoleBindingConfigYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sRoleBindingConfigYamlBytes()
@@ -1221,9 +1475,13 @@ var _assetsPrometheusK8sRoleBindingSpecificNamespacesYaml = []byte("\x1f\x8b\x08
 func assetsPrometheusK8sRoleBindingSpecificNamespacesYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sRoleBindingSpecificNamespacesYaml, "assets/prometheus-k8s/role-binding-specific-namespaces.yaml")
 }
 func assetsPrometheusK8sRoleBindingSpecificNamespacesYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sRoleBindingSpecificNamespacesYamlBytes()
@@ -1240,9 +1498,13 @@ var _assetsPrometheusK8sRoleConfigYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x0
 func assetsPrometheusK8sRoleConfigYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sRoleConfigYaml, "assets/prometheus-k8s/role-config.yaml")
 }
 func assetsPrometheusK8sRoleConfigYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sRoleConfigYamlBytes()
@@ -1259,9 +1521,13 @@ var _assetsPrometheusK8sRoleSpecificNamespacesYaml = []byte("\x1f\x8b\x08\x00\x0
 func assetsPrometheusK8sRoleSpecificNamespacesYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sRoleSpecificNamespacesYaml, "assets/prometheus-k8s/role-specific-namespaces.yaml")
 }
 func assetsPrometheusK8sRoleSpecificNamespacesYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sRoleSpecificNamespacesYamlBytes()
@@ -1278,9 +1544,13 @@ var _assetsPrometheusK8sRouteYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00
 func assetsPrometheusK8sRouteYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sRouteYaml, "assets/prometheus-k8s/route.yaml")
 }
 func assetsPrometheusK8sRouteYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sRouteYamlBytes()
@@ -1297,9 +1567,13 @@ var _assetsPrometheusK8sRulesYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00
 func assetsPrometheusK8sRulesYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sRulesYaml, "assets/prometheus-k8s/rules.yaml")
 }
 func assetsPrometheusK8sRulesYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sRulesYamlBytes()
@@ -1316,9 +1590,13 @@ var _assetsPrometheusK8sServiceAccountYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x0
 func assetsPrometheusK8sServiceAccountYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceAccountYaml, "assets/prometheus-k8s/service-account.yaml")
 }
 func assetsPrometheusK8sServiceAccountYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceAccountYamlBytes()
@@ -1335,9 +1613,13 @@ var _assetsPrometheusK8sServiceMonitorApiserverYaml = []byte("\x1f\x8b\x08\x00\x
 func assetsPrometheusK8sServiceMonitorApiserverYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceMonitorApiserverYaml, "assets/prometheus-k8s/service-monitor-apiserver.yaml")
 }
 func assetsPrometheusK8sServiceMonitorApiserverYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceMonitorApiserverYamlBytes()
@@ -1354,9 +1636,13 @@ var _assetsPrometheusK8sServiceMonitorClusterVersionOperatorYaml = []byte("\x1f\
 func assetsPrometheusK8sServiceMonitorClusterVersionOperatorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceMonitorClusterVersionOperatorYaml, "assets/prometheus-k8s/service-monitor-cluster-version-operator.yaml")
 }
 func assetsPrometheusK8sServiceMonitorClusterVersionOperatorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceMonitorClusterVersionOperatorYamlBytes()
@@ -1373,9 +1659,13 @@ var _assetsPrometheusK8sServiceMonitorEtcdYaml = []byte("\x1f\x8b\x08\x00\x00\x0
 func assetsPrometheusK8sServiceMonitorEtcdYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceMonitorEtcdYaml, "assets/prometheus-k8s/service-monitor-etcd.yaml")
 }
 func assetsPrometheusK8sServiceMonitorEtcdYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceMonitorEtcdYamlBytes()
@@ -1392,9 +1682,13 @@ var _assetsPrometheusK8sServiceMonitorKubeControllerManagerYaml = []byte("\x1f\x
 func assetsPrometheusK8sServiceMonitorKubeControllerManagerYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceMonitorKubeControllerManagerYaml, "assets/prometheus-k8s/service-monitor-kube-controller-manager.yaml")
 }
 func assetsPrometheusK8sServiceMonitorKubeControllerManagerYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceMonitorKubeControllerManagerYamlBytes()
@@ -1411,9 +1705,13 @@ var _assetsPrometheusK8sServiceMonitorKubeSchedulerYaml = []byte("\x1f\x8b\x08\x
 func assetsPrometheusK8sServiceMonitorKubeSchedulerYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceMonitorKubeSchedulerYaml, "assets/prometheus-k8s/service-monitor-kube-scheduler.yaml")
 }
 func assetsPrometheusK8sServiceMonitorKubeSchedulerYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceMonitorKubeSchedulerYamlBytes()
@@ -1430,9 +1728,13 @@ var _assetsPrometheusK8sServiceMonitorKubeletYaml = []byte("\x1f\x8b\x08\x00\x00
 func assetsPrometheusK8sServiceMonitorKubeletYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceMonitorKubeletYaml, "assets/prometheus-k8s/service-monitor-kubelet.yaml")
 }
 func assetsPrometheusK8sServiceMonitorKubeletYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceMonitorKubeletYamlBytes()
@@ -1449,9 +1751,13 @@ var _assetsPrometheusK8sServiceMonitorOpenShiftApiserverYaml = []byte("\x1f\x8b\
 func assetsPrometheusK8sServiceMonitorOpenShiftApiserverYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceMonitorOpenShiftApiserverYaml, "assets/prometheus-k8s/service-monitor-open-shift-apiserver.yaml")
 }
 func assetsPrometheusK8sServiceMonitorOpenShiftApiserverYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceMonitorOpenShiftApiserverYamlBytes()
@@ -1468,9 +1774,13 @@ var _assetsPrometheusK8sServiceMonitorYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x0
 func assetsPrometheusK8sServiceMonitorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceMonitorYaml, "assets/prometheus-k8s/service-monitor.yaml")
 }
 func assetsPrometheusK8sServiceMonitorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceMonitorYamlBytes()
@@ -1487,9 +1797,13 @@ var _assetsPrometheusK8sServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x
 func assetsPrometheusK8sServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServiceYaml, "assets/prometheus-k8s/service.yaml")
 }
 func assetsPrometheusK8sServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServiceYamlBytes()
@@ -1506,9 +1820,13 @@ var _assetsPrometheusK8sServingCertsCaBundleYaml = []byte("\x1f\x8b\x08\x00\x00\
 func assetsPrometheusK8sServingCertsCaBundleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusK8sServingCertsCaBundleYaml, "assets/prometheus-k8s/serving-certs-ca-bundle.yaml")
 }
 func assetsPrometheusK8sServingCertsCaBundleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusK8sServingCertsCaBundleYamlBytes()
@@ -1525,9 +1843,13 @@ var _assetsPrometheusOperatorClusterRoleBindingYaml = []byte("\x1f\x8b\x08\x00\x
 func assetsPrometheusOperatorClusterRoleBindingYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusOperatorClusterRoleBindingYaml, "assets/prometheus-operator/cluster-role-binding.yaml")
 }
 func assetsPrometheusOperatorClusterRoleBindingYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusOperatorClusterRoleBindingYamlBytes()
@@ -1544,9 +1866,13 @@ var _assetsPrometheusOperatorClusterRoleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\
 func assetsPrometheusOperatorClusterRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusOperatorClusterRoleYaml, "assets/prometheus-operator/cluster-role.yaml")
 }
 func assetsPrometheusOperatorClusterRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusOperatorClusterRoleYamlBytes()
@@ -1563,9 +1889,13 @@ var _assetsPrometheusOperatorDeploymentYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x
 func assetsPrometheusOperatorDeploymentYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusOperatorDeploymentYaml, "assets/prometheus-operator/deployment.yaml")
 }
 func assetsPrometheusOperatorDeploymentYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusOperatorDeploymentYamlBytes()
@@ -1582,9 +1912,13 @@ var _assetsPrometheusOperatorServiceAccountYaml = []byte("\x1f\x8b\x08\x00\x00\x
 func assetsPrometheusOperatorServiceAccountYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusOperatorServiceAccountYaml, "assets/prometheus-operator/service-account.yaml")
 }
 func assetsPrometheusOperatorServiceAccountYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusOperatorServiceAccountYamlBytes()
@@ -1601,9 +1935,13 @@ var _assetsPrometheusOperatorServiceMonitorYaml = []byte("\x1f\x8b\x08\x00\x00\x
 func assetsPrometheusOperatorServiceMonitorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusOperatorServiceMonitorYaml, "assets/prometheus-operator/service-monitor.yaml")
 }
 func assetsPrometheusOperatorServiceMonitorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusOperatorServiceMonitorYamlBytes()
@@ -1620,9 +1958,13 @@ var _assetsPrometheusOperatorServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\
 func assetsPrometheusOperatorServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsPrometheusOperatorServiceYaml, "assets/prometheus-operator/service.yaml")
 }
 func assetsPrometheusOperatorServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsPrometheusOperatorServiceYamlBytes()
@@ -1639,9 +1981,13 @@ var _assetsTelemeterClientClusterRoleBindingViewYaml = []byte("\x1f\x8b\x08\x00\
 func assetsTelemeterClientClusterRoleBindingViewYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsTelemeterClientClusterRoleBindingViewYaml, "assets/telemeter-client/cluster-role-binding-view.yaml")
 }
 func assetsTelemeterClientClusterRoleBindingViewYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsTelemeterClientClusterRoleBindingViewYamlBytes()
@@ -1658,9 +2004,13 @@ var _assetsTelemeterClientClusterRoleBindingYaml = []byte("\x1f\x8b\x08\x00\x00\
 func assetsTelemeterClientClusterRoleBindingYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsTelemeterClientClusterRoleBindingYaml, "assets/telemeter-client/cluster-role-binding.yaml")
 }
 func assetsTelemeterClientClusterRoleBindingYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsTelemeterClientClusterRoleBindingYamlBytes()
@@ -1677,9 +2027,13 @@ var _assetsTelemeterClientClusterRoleYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00
 func assetsTelemeterClientClusterRoleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsTelemeterClientClusterRoleYaml, "assets/telemeter-client/cluster-role.yaml")
 }
 func assetsTelemeterClientClusterRoleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsTelemeterClientClusterRoleYamlBytes()
@@ -1696,9 +2050,13 @@ var _assetsTelemeterClientDeploymentYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\
 func assetsTelemeterClientDeploymentYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsTelemeterClientDeploymentYaml, "assets/telemeter-client/deployment.yaml")
 }
 func assetsTelemeterClientDeploymentYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsTelemeterClientDeploymentYamlBytes()
@@ -1715,9 +2073,13 @@ var _assetsTelemeterClientSecretYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\
 func assetsTelemeterClientSecretYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsTelemeterClientSecretYaml, "assets/telemeter-client/secret.yaml")
 }
 func assetsTelemeterClientSecretYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsTelemeterClientSecretYamlBytes()
@@ -1734,9 +2096,13 @@ var _assetsTelemeterClientServiceAccountYaml = []byte("\x1f\x8b\x08\x00\x00\x00\
 func assetsTelemeterClientServiceAccountYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsTelemeterClientServiceAccountYaml, "assets/telemeter-client/service-account.yaml")
 }
 func assetsTelemeterClientServiceAccountYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsTelemeterClientServiceAccountYamlBytes()
@@ -1753,9 +2119,13 @@ var _assetsTelemeterClientServiceMonitorYaml = []byte("\x1f\x8b\x08\x00\x00\x00\
 func assetsTelemeterClientServiceMonitorYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsTelemeterClientServiceMonitorYaml, "assets/telemeter-client/service-monitor.yaml")
 }
 func assetsTelemeterClientServiceMonitorYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsTelemeterClientServiceMonitorYamlBytes()
@@ -1772,9 +2142,13 @@ var _assetsTelemeterClientServiceYaml = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00
 func assetsTelemeterClientServiceYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsTelemeterClientServiceYaml, "assets/telemeter-client/service.yaml")
 }
 func assetsTelemeterClientServiceYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsTelemeterClientServiceYamlBytes()
@@ -1791,9 +2165,13 @@ var _assetsTelemeterClientServingCertsCABundleYaml = []byte("\x1f\x8b\x08\x00\x0
 func assetsTelemeterClientServingCertsCABundleYamlBytes() ([]byte, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return bindataRead(_assetsTelemeterClientServingCertsCABundleYaml, "assets/telemeter-client/serving-certs-c-a-bundle.yaml")
 }
 func assetsTelemeterClientServingCertsCABundleYaml() (*asset, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	bytes, err := assetsTelemeterClientServingCertsCABundleYamlBytes()
@@ -1805,6 +2183,8 @@ func assetsTelemeterClientServingCertsCABundleYaml() (*asset, error) {
 	return a, nil
 }
 func Asset(name string) ([]byte, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	cannonicalName := strings.Replace(name, "\\", "/", -1)
@@ -1820,6 +2200,8 @@ func Asset(name string) ([]byte, error) {
 func MustAsset(name string) []byte {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	a, err := Asset(name)
 	if err != nil {
 		panic("asset: Asset(" + name + "): " + err.Error())
@@ -1827,6 +2209,8 @@ func MustAsset(name string) []byte {
 	return a
 }
 func AssetInfo(name string) (os.FileInfo, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	cannonicalName := strings.Replace(name, "\\", "/", -1)
@@ -1842,6 +2226,8 @@ func AssetInfo(name string) (os.FileInfo, error) {
 func AssetNames() []string {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	names := make([]string, 0, len(_bindata))
 	for name := range _bindata {
 		names = append(names, name)
@@ -1852,6 +2238,8 @@ func AssetNames() []string {
 var _bindata = map[string]func() (*asset, error){"assets/alertmanager/alertmanager.yaml": assetsAlertmanagerAlertmanagerYaml, "assets/alertmanager/cluster-role-binding.yaml": assetsAlertmanagerClusterRoleBindingYaml, "assets/alertmanager/cluster-role.yaml": assetsAlertmanagerClusterRoleYaml, "assets/alertmanager/proxy-secret.yaml": assetsAlertmanagerProxySecretYaml, "assets/alertmanager/route.yaml": assetsAlertmanagerRouteYaml, "assets/alertmanager/secret.yaml": assetsAlertmanagerSecretYaml, "assets/alertmanager/service-account.yaml": assetsAlertmanagerServiceAccountYaml, "assets/alertmanager/service-monitor.yaml": assetsAlertmanagerServiceMonitorYaml, "assets/alertmanager/service.yaml": assetsAlertmanagerServiceYaml, "assets/cluster-monitoring-operator/cluster-role.yaml": assetsClusterMonitoringOperatorClusterRoleYaml, "assets/cluster-monitoring-operator/service-monitor.yaml": assetsClusterMonitoringOperatorServiceMonitorYaml, "assets/cluster-monitoring-operator/service.yaml": assetsClusterMonitoringOperatorServiceYaml, "assets/grafana/cluster-role-binding.yaml": assetsGrafanaClusterRoleBindingYaml, "assets/grafana/cluster-role.yaml": assetsGrafanaClusterRoleYaml, "assets/grafana/config.yaml": assetsGrafanaConfigYaml, "assets/grafana/dashboard-datasources.yaml": assetsGrafanaDashboardDatasourcesYaml, "assets/grafana/dashboard-definitions.yaml": assetsGrafanaDashboardDefinitionsYaml, "assets/grafana/dashboard-sources.yaml": assetsGrafanaDashboardSourcesYaml, "assets/grafana/deployment.yaml": assetsGrafanaDeploymentYaml, "assets/grafana/proxy-secret.yaml": assetsGrafanaProxySecretYaml, "assets/grafana/route.yaml": assetsGrafanaRouteYaml, "assets/grafana/service-account.yaml": assetsGrafanaServiceAccountYaml, "assets/grafana/service-monitor.yaml": assetsGrafanaServiceMonitorYaml, "assets/grafana/service.yaml": assetsGrafanaServiceYaml, "assets/kube-state-metrics/cluster-role-binding.yaml": assetsKubeStateMetricsClusterRoleBindingYaml, "assets/kube-state-metrics/cluster-role.yaml": assetsKubeStateMetricsClusterRoleYaml, "assets/kube-state-metrics/deployment.yaml": assetsKubeStateMetricsDeploymentYaml, "assets/kube-state-metrics/role-binding.yaml": assetsKubeStateMetricsRoleBindingYaml, "assets/kube-state-metrics/role.yaml": assetsKubeStateMetricsRoleYaml, "assets/kube-state-metrics/service-account.yaml": assetsKubeStateMetricsServiceAccountYaml, "assets/kube-state-metrics/service-monitor.yaml": assetsKubeStateMetricsServiceMonitorYaml, "assets/kube-state-metrics/service.yaml": assetsKubeStateMetricsServiceYaml, "assets/node-exporter/cluster-role-binding.yaml": assetsNodeExporterClusterRoleBindingYaml, "assets/node-exporter/cluster-role.yaml": assetsNodeExporterClusterRoleYaml, "assets/node-exporter/daemonset.yaml": assetsNodeExporterDaemonsetYaml, "assets/node-exporter/security-context-constraints.yaml": assetsNodeExporterSecurityContextConstraintsYaml, "assets/node-exporter/service-account.yaml": assetsNodeExporterServiceAccountYaml, "assets/node-exporter/service-monitor.yaml": assetsNodeExporterServiceMonitorYaml, "assets/node-exporter/service.yaml": assetsNodeExporterServiceYaml, "assets/prometheus-adapter/api-service.yaml": assetsPrometheusAdapterApiServiceYaml, "assets/prometheus-adapter/cluster-role-aggregated-metrics-reader.yaml": assetsPrometheusAdapterClusterRoleAggregatedMetricsReaderYaml, "assets/prometheus-adapter/cluster-role-binding-delegator.yaml": assetsPrometheusAdapterClusterRoleBindingDelegatorYaml, "assets/prometheus-adapter/cluster-role-binding-view.yaml": assetsPrometheusAdapterClusterRoleBindingViewYaml, "assets/prometheus-adapter/cluster-role-binding.yaml": assetsPrometheusAdapterClusterRoleBindingYaml, "assets/prometheus-adapter/cluster-role-server-resources.yaml": assetsPrometheusAdapterClusterRoleServerResourcesYaml, "assets/prometheus-adapter/cluster-role.yaml": assetsPrometheusAdapterClusterRoleYaml, "assets/prometheus-adapter/config-map.yaml": assetsPrometheusAdapterConfigMapYaml, "assets/prometheus-adapter/configmap-prometheus.yaml": assetsPrometheusAdapterConfigmapPrometheusYaml, "assets/prometheus-adapter/deployment.yaml": assetsPrometheusAdapterDeploymentYaml, "assets/prometheus-adapter/role-binding-auth-reader.yaml": assetsPrometheusAdapterRoleBindingAuthReaderYaml, "assets/prometheus-adapter/service-account.yaml": assetsPrometheusAdapterServiceAccountYaml, "assets/prometheus-adapter/service.yaml": assetsPrometheusAdapterServiceYaml, "assets/prometheus-k8s/cluster-role-binding.yaml": assetsPrometheusK8sClusterRoleBindingYaml, "assets/prometheus-k8s/cluster-role.yaml": assetsPrometheusK8sClusterRoleYaml, "assets/prometheus-k8s/htpasswd-secret.yaml": assetsPrometheusK8sHtpasswdSecretYaml, "assets/prometheus-k8s/kube-rbac-proxy-secret.yaml": assetsPrometheusK8sKubeRbacProxySecretYaml, "assets/prometheus-k8s/kubelet-serving-ca-bundle.yaml": assetsPrometheusK8sKubeletServingCaBundleYaml, "assets/prometheus-k8s/prometheus.yaml": assetsPrometheusK8sPrometheusYaml, "assets/prometheus-k8s/proxy-secret.yaml": assetsPrometheusK8sProxySecretYaml, "assets/prometheus-k8s/role-binding-config.yaml": assetsPrometheusK8sRoleBindingConfigYaml, "assets/prometheus-k8s/role-binding-specific-namespaces.yaml": assetsPrometheusK8sRoleBindingSpecificNamespacesYaml, "assets/prometheus-k8s/role-config.yaml": assetsPrometheusK8sRoleConfigYaml, "assets/prometheus-k8s/role-specific-namespaces.yaml": assetsPrometheusK8sRoleSpecificNamespacesYaml, "assets/prometheus-k8s/route.yaml": assetsPrometheusK8sRouteYaml, "assets/prometheus-k8s/rules.yaml": assetsPrometheusK8sRulesYaml, "assets/prometheus-k8s/service-account.yaml": assetsPrometheusK8sServiceAccountYaml, "assets/prometheus-k8s/service-monitor-apiserver.yaml": assetsPrometheusK8sServiceMonitorApiserverYaml, "assets/prometheus-k8s/service-monitor-cluster-version-operator.yaml": assetsPrometheusK8sServiceMonitorClusterVersionOperatorYaml, "assets/prometheus-k8s/service-monitor-etcd.yaml": assetsPrometheusK8sServiceMonitorEtcdYaml, "assets/prometheus-k8s/service-monitor-kube-controller-manager.yaml": assetsPrometheusK8sServiceMonitorKubeControllerManagerYaml, "assets/prometheus-k8s/service-monitor-kube-scheduler.yaml": assetsPrometheusK8sServiceMonitorKubeSchedulerYaml, "assets/prometheus-k8s/service-monitor-kubelet.yaml": assetsPrometheusK8sServiceMonitorKubeletYaml, "assets/prometheus-k8s/service-monitor-open-shift-apiserver.yaml": assetsPrometheusK8sServiceMonitorOpenShiftApiserverYaml, "assets/prometheus-k8s/service-monitor.yaml": assetsPrometheusK8sServiceMonitorYaml, "assets/prometheus-k8s/service.yaml": assetsPrometheusK8sServiceYaml, "assets/prometheus-k8s/serving-certs-ca-bundle.yaml": assetsPrometheusK8sServingCertsCaBundleYaml, "assets/prometheus-operator/cluster-role-binding.yaml": assetsPrometheusOperatorClusterRoleBindingYaml, "assets/prometheus-operator/cluster-role.yaml": assetsPrometheusOperatorClusterRoleYaml, "assets/prometheus-operator/deployment.yaml": assetsPrometheusOperatorDeploymentYaml, "assets/prometheus-operator/service-account.yaml": assetsPrometheusOperatorServiceAccountYaml, "assets/prometheus-operator/service-monitor.yaml": assetsPrometheusOperatorServiceMonitorYaml, "assets/prometheus-operator/service.yaml": assetsPrometheusOperatorServiceYaml, "assets/telemeter-client/cluster-role-binding-view.yaml": assetsTelemeterClientClusterRoleBindingViewYaml, "assets/telemeter-client/cluster-role-binding.yaml": assetsTelemeterClientClusterRoleBindingYaml, "assets/telemeter-client/cluster-role.yaml": assetsTelemeterClientClusterRoleYaml, "assets/telemeter-client/deployment.yaml": assetsTelemeterClientDeploymentYaml, "assets/telemeter-client/secret.yaml": assetsTelemeterClientSecretYaml, "assets/telemeter-client/service-account.yaml": assetsTelemeterClientServiceAccountYaml, "assets/telemeter-client/service-monitor.yaml": assetsTelemeterClientServiceMonitorYaml, "assets/telemeter-client/service.yaml": assetsTelemeterClientServiceYaml, "assets/telemeter-client/serving-certs-c-a-bundle.yaml": assetsTelemeterClientServingCertsCABundleYaml}
 
 func AssetDir(name string) ([]string, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	node := _bintree
@@ -1885,6 +2273,8 @@ var _bintree = &bintree{nil, map[string]*bintree{"assets": &bintree{nil, map[str
 func RestoreAsset(dir, name string) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	data, err := Asset(name)
 	if err != nil {
 		return err
@@ -1910,6 +2300,8 @@ func RestoreAsset(dir, name string) error {
 func RestoreAssets(dir, name string) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	children, err := AssetDir(name)
 	if err != nil {
 		return RestoreAsset(dir, name)
@@ -1925,13 +2317,24 @@ func RestoreAssets(dir, name string) error {
 func _filePath(dir, name string) string {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cannonicalName := strings.Replace(name, "\\", "/", -1)
 	return filepath.Join(append([]string{dir}, strings.Split(cannonicalName, "/")...)...)
 }
 func _logClusterCodePath() {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	pc, _, _, _ := godefaultruntime.Caller(1)
 	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
 	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
+}
+func _logClusterCodePath() {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	pc, _, _, _ := godefaultruntime.Caller(1)
+	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
+	godefaulthttp.Post("/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
 }

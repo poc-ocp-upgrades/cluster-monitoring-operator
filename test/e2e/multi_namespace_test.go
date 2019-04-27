@@ -14,6 +14,8 @@ import (
 func TestMultinamespacePrometheusRule(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	nsName := "openshift-test-prometheus-rules" + strconv.FormatInt(time.Now().Unix(), 36)
 	err := f.OperatorClient.CreateOrUpdateNamespace(&v1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: nsName, Labels: map[string]string{"openshift.io/cluster-monitoring": "true"}}})

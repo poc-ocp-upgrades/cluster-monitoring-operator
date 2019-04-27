@@ -18,11 +18,15 @@ var f *framework.Framework
 func TestMain(m *testing.M) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if err := testMain(m); err != nil {
 		log.Fatal(err)
 	}
 }
 func testMain(m *testing.M) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	kubeConfigPath := flag.String("kubeconfig", clientcmd.RecommendedHomeFile, "kube config path, default: $HOME/.kube/config")
@@ -79,12 +83,16 @@ func testMain(m *testing.M) error {
 func TestTargetsUp(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	targets := []string{"node-exporter", "kubelet", "apiserver", "kube-state-metrics", "prometheus-k8s", "prometheus-operator", "alertmanager-main", "crio", "telemeter-client", "etcd"}
 	for _, target := range targets {
 		f.PrometheusK8sClient.WaitForQueryReturnOne(t, time.Minute, "max(up{job=\""+target+"\"})")
 	}
 }
 func TestMemoryUsageRecordingRule(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	f.PrometheusK8sClient.WaitForQueryReturnGreaterEqualOne(t, time.Minute, "count(namespace:container_memory_usage_bytes:sum)")

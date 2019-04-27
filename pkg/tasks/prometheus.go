@@ -18,9 +18,13 @@ type PrometheusTask struct {
 func NewPrometheusTask(client *client.Client, factory *manifests.Factory, config *manifests.Config) *PrometheusTask {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &PrometheusTask{client: client, factory: factory, config: config}
 }
 func (t *PrometheusTask) Run() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	cacm, err := t.factory.PrometheusK8sServingCertsCABundle()

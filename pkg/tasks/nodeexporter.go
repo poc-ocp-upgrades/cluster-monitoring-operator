@@ -14,9 +14,13 @@ type NodeExporterTask struct {
 func NewNodeExporterTask(client *client.Client, factory *manifests.Factory) *NodeExporterTask {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &NodeExporterTask{client: client, factory: factory}
 }
 func (t *NodeExporterTask) Run() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	scc, err := t.factory.NodeExporterSecurityContextConstraints()

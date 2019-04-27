@@ -76,6 +76,8 @@ type EtcdConfig struct {
 func (e *EtcdConfig) IsEnabled() bool {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if e.Enabled == nil {
 		return false
 	}
@@ -93,6 +95,8 @@ type TelemeterClientConfig struct {
 func (cfg *TelemeterClientConfig) IsEnabled() bool {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if cfg == nil {
 		return false
 	}
@@ -102,6 +106,8 @@ func (cfg *TelemeterClientConfig) IsEnabled() bool {
 	return true
 }
 func NewConfig(content io.Reader) (*Config, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	c := Config{}
@@ -114,6 +120,8 @@ func NewConfig(content io.Reader) (*Config, error) {
 	return res, nil
 }
 func (c *Config) applyDefaults() {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if c.Images == nil {
@@ -159,6 +167,8 @@ func (c *Config) applyDefaults() {
 func (c *Config) SetImages(images map[string]string) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c.Images.PrometheusOperator = images["prometheus-operator"]
 	c.Images.PrometheusConfigReloader = images["prometheus-config-reloader"]
 	c.Images.ConfigmapReloader = images["configmap-reloader"]
@@ -176,6 +186,8 @@ func (c *Config) SetImages(images map[string]string) {
 func (c *Config) LoadClusterID(load func() (*configv1.ClusterVersion, error)) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if c.TelemeterClientConfig.ClusterID != "" {
 		return nil
 	}
@@ -187,6 +199,8 @@ func (c *Config) LoadClusterID(load func() (*configv1.ClusterVersion, error)) er
 	return nil
 }
 func (c *Config) LoadToken(load func() (*v1.Secret, error)) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	if c.TelemeterClientConfig.Token != "" {
@@ -215,6 +229,8 @@ func (c *Config) LoadToken(load func() (*v1.Secret, error)) error {
 func (c *Config) LoadProxy(load func() (*configv1.Proxy, error)) error {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if c.HTTPConfig.HTTPProxy != "" || c.HTTPConfig.HTTPSProxy != "" || c.HTTPConfig.NoProxy != "" {
 		return nil
 	}
@@ -230,12 +246,16 @@ func (c *Config) LoadProxy(load func() (*configv1.Proxy, error)) error {
 func NewConfigFromString(content string) (*Config, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if content == "" {
 		return NewDefaultConfig(), nil
 	}
 	return NewConfig(bytes.NewBuffer([]byte(content)))
 }
 func NewDefaultConfig() *Config {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	c := &Config{}

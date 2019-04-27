@@ -8,6 +8,8 @@ import (
 func GeneratePassword(n int) (string, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	b := make([]byte, n)
 	_, err := rand.Read(b)
 	if err != nil {

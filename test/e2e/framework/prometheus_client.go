@@ -24,6 +24,8 @@ type PrometheusClient struct {
 func NewPrometheusClient(routeClient routev1.RouteV1Interface, kubeClient kubernetes.Interface) (*PrometheusClient, error) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	route, err := routeClient.Routes("openshift-monitoring").Get("prometheus-k8s", metav1.GetOptions{})
 	if err != nil {
 		return nil, err
@@ -42,6 +44,8 @@ func NewPrometheusClient(routeClient routev1.RouteV1Interface, kubeClient kubern
 	return &PrometheusClient{host: host, token: token}, nil
 }
 func (c *PrometheusClient) Query(query string) ([]byte, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	tr := &http.Transport{TLSClientConfig: &tls.Config{InsecureSkipVerify: true}}
@@ -66,6 +70,8 @@ func (c *PrometheusClient) Query(query string) ([]byte, error) {
 	return body, nil
 }
 func GetFirstValueFromPromQuery(body []byte) (int, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	res, err := gabs.ParseJSON(body)
@@ -96,6 +102,8 @@ func GetFirstValueFromPromQuery(body []byte) (int, error) {
 func (c *PrometheusClient) WaitForQueryReturnGreaterEqualOne(t *testing.T, timeout time.Duration, query string) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c.WaitForQueryReturn(t, timeout, query, func(v int) error {
 		if v >= 1 {
 			return nil
@@ -106,6 +114,8 @@ func (c *PrometheusClient) WaitForQueryReturnGreaterEqualOne(t *testing.T, timeo
 func (c *PrometheusClient) WaitForQueryReturnOne(t *testing.T, timeout time.Duration, query string) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c.WaitForQueryReturn(t, timeout, query, func(v int) error {
 		if v == 1 {
 			return nil
@@ -114,6 +124,8 @@ func (c *PrometheusClient) WaitForQueryReturnOne(t *testing.T, timeout time.Dura
 	})
 }
 func (c *PrometheusClient) WaitForQueryReturn(t *testing.T, timeout time.Duration, query string, validate func(int) error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	err := wait.Poll(5*time.Second, timeout, func() (bool, error) {

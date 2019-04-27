@@ -9,6 +9,8 @@ import (
 func TestErrMapReader(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	type checkFunc func(*errMapReader) error
 	checks := func(cs ...checkFunc) checkFunc {
 		return func(em *errMapReader) error {

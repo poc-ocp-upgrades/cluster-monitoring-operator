@@ -16,6 +16,8 @@ import (
 func TestAggregatedMetricPermissions(t *testing.T) {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	present := func(where []string, what string) bool {
 		sort.Strings(where)
 		i := sort.SearchStrings(where, what)
@@ -58,6 +60,8 @@ func TestAggregatedMetricPermissions(t *testing.T) {
 	}
 }
 func TestPrometheusAdapterCARotation(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	var lastErr error

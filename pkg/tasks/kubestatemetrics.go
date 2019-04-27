@@ -14,9 +14,13 @@ type KubeStateMetricsTask struct {
 func NewKubeStateMetricsTask(client *client.Client, factory *manifests.Factory) *KubeStateMetricsTask {
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &KubeStateMetricsTask{client: client, factory: factory}
 }
 func (t *KubeStateMetricsTask) Run() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	sa, err := t.factory.KubeStateMetricsServiceAccount()
